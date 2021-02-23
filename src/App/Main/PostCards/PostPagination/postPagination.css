@@ -1,0 +1,31 @@
+.post-pagination-row {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination-list {
+    display: flex;
+}
+.pagination-item {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #f67280;
+    text-align: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    line-height: 35px;
+    cursor: pointer;
+}
+.pagination-link {
+    color: #f67280;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+}
+.pagination-item:hover {
+    background-color: #f67280;
+}
+.pagination-item:hover .pagination-link {
+    color: #ffffff;
+}

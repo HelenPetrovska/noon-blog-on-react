@@ -1,0 +1,23 @@
+.post-cards {
+    margin-top: 80px;
+}
+.post-cards-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+
+/* tablet sm*/
+@media(min-width: 768px) {
+    .post-cards-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* laptop md*/
+@media(min-width:992px) {
+    .post-cards-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+

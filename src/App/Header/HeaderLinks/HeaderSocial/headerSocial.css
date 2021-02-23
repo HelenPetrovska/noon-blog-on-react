@@ -1,0 +1,25 @@
+.social-list {
+    display: flex;
+}
+.social-list-header {
+    display: none;
+}
+.social-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.social-link {
+    color: #506172;
+    font-size: 14px;
+}
+.social-link:hover {
+    color: #f67280;
+}
+
+/* tablet sm*/
+@media(min-width: 768px) {
+    .social-list-header {
+        display: flex;
+    }
+}
+
