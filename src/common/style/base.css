@@ -3,25 +3,10 @@
 }
 body {
     font-family: 'Mulish', sans-serif;
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-    grid-template-columns: 1fr;
     font-size: 16px;
     color: #506172;
     font-weight: 400;
     line-height: 1.5;
-}
-.header {
-    grid-area: header;
-}
-.main {
-    grid-area: main;
-}
-.footer {
-    grid-area: footer;
 }
 .container-fluid {
 	max-width: 100%;
@@ -45,23 +30,6 @@ img {
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
-/* header xs */
-.header-row {
-    display: grid;
-    grid-template-columns: 150px 1fr 40px;
-    grid-template-areas: 
-    "logo header-links menu";
-    grid-gap: 15px;
-}
-.logo {
-    grid-area: logo;
-}
-.menu {
-    grid-area: menu;
-}
-.header-links {
-    grid-area: header-links;
-}
 
 /* Tablet sm */
 @media(min-width: 768px) {
@@ -69,13 +37,6 @@ img {
 
 /* Laptop md */
 @media(min-width: 992px) {
-	/* header md min 992 */
-	.header-row {
-		grid-template-columns: 1fr 4fr 1fr;
-		grid-template-areas: 
-		"logo menu header-links";
-	}
-	
 }
 
 /* Desctop lg */

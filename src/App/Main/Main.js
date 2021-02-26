@@ -1,12 +1,13 @@
 import React from 'react'
+import Swiper from './Slider/Slider'
 import PostCards from './PostCards/PostCards'
 import Subscribe from './Subscribe/Subscribe'
-import Autoplay from './Slider/Slider'
+
 
 const Main = () => {
     return (
         <main className="main">
-            <Autoplay/>
+            <Swiper/>
             <PostCards/>
             <Subscribe/>
         </main>

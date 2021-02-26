@@ -6,9 +6,38 @@
     top: 0;
     right: 0;
     left: 0;
-    z-index: 10;
+    z-index: 2;
 }
+.header-row {
+    display: grid;
+    grid-template-columns: 150px 1fr 40px;
+    grid-template-areas: 
+    "logo header-links menu";
+    grid-gap: 15px;
+}
+.logo {
+    grid-area: logo;
+}
+.menu {
+    grid-area: menu;
+}
+.header-links {
+    grid-area: header-links;
+}
+
 
 /* tablet sm*/
 @media(min-width: 768px) {
 }
+
+/* Laptop md */
+@media(min-width: 992px) {
+	/* header md min 992 */
+	.header-row {
+		grid-template-columns: 1fr 4fr 1fr;
+		grid-template-areas: 
+		"logo menu header-links";
+	}
+	
+}
+
