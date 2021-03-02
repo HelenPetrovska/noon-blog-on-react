@@ -1,15 +1,160 @@
+.slick-row {
+    position: relative;
+}
 .slide {
-    height: calc(100vh - 70px);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    position: relative;
 }
-.slide1 {
-    background-image: url(slider1.jpg);
+.slide-img {
+    height: calc(100vh - 70px);
+    object-fit: cover;
 }
-.slide2 {
-    background-image: url(slider2.jpg);
+.slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
 }
-.slide3 {
-    background-image: url(slider3.jpg);
+.slick-arrow {
+    display: none;
 }
+.slick-dots {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    right: 10%;
+    width: auto;
+    top: 0;
+    bottom: 0;
+}
+.slick-dots li {
+    width: 250px;
+    height: 100px;
+    padding: 5px 20px;
+    background: rgba(0,0,0,.25);
+    border-radius: 20px;
+    margin: 10px 0;
+}
+.slick-dots li.slick-active {
+    background: rgba(0,0,0,.45);
+}
+.slick-dots li button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+.slick-dots li button::before {
+    font-family: 'Mulish', sans-serif;
+    color: #ffffff;
+    opacity: 0.75;
+    font-size: 17px;
+    font-weight: 800;
+    padding: 7px;
+    display: block;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+.slick-dots li.slick-active button::before, .slick-dots li.slick-active button::after {
+    color: #ffffff;
+    opacity: 1;
+}
+.slick-dots li button::after {
+    color: #ffffff;
+    opacity: 0.75;
+    font-size: 14px;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.5;
+    display: block;
+    padding: 0 5px;
+}
+.slick-dots li button:hover::after {
+    opacity: 1;
+}
+.slick-dots li:first-child button::before {
+    content: "Travel";
+}
+.slick-dots li:first-child button::after {
+    content: "Top 10 Forests That Every Nature Lover Must Visit";
+}
+.slick-dots li:nth-child(2) button::before {
+    content: "Food";
+}
+.slick-dots li:nth-child(2) button::after {
+    content: "7 Dinner Recipes for a Date Night at Home";
+}
+.slick-dots li:last-child button::before {
+    content: "Livestyle";
+}
+.slick-dots li:last-child button::after {
+    content: "How reading rewires your brain for higher intelligence";
+}
+
+.slide-content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slide-categorie-link {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    background-color: #f67280;
+    padding: 4px 15px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 20px;
+}
+.slide-categorie-link:hover {
+    background-color: #506172;
+}
+.slide-title {
+    margin: 15px 0;
+}
+.slide-title-link {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.4;
+    transition: all 0.5s ease-in-out;
+}
+.slide-title-link:hover{
+    color: #f67280;
+}
+.slide-info {
+    display: flex;
+    align-items: center;
+}
+.slide-info .author-name-link {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+}
+.slide-dot {
+    width: 4px;
+    height: 4px;
+    background-color: #f67280;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.slide-date {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+}
+

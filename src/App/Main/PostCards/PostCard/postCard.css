@@ -65,6 +65,9 @@
     font-size: 13px;
     font-weight: 500;
 }
+.author-name-link:hover {
+    color: #f67280;
+}
 .dot {
     width: 4px;
     height: 4px;
