@@ -16,6 +16,9 @@
 
 /* laptop md*/
 @media(min-width:992px) {
+    .post-cards {
+        margin-top: 70px;
+    }
     .post-cards-row {
         grid-template-columns: repeat(3, 1fr);
     }
