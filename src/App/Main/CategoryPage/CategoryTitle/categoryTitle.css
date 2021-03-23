@@ -1,0 +1,34 @@
+.category-title-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+.breadcrumb-list {
+    display: flex;
+}
+.breadcrumb-link {
+    font-size: 80%;
+    color: #506172;
+    text-transform: capitalize;
+}
+.breadcrumb-item:not(:last-child):after {
+    content: "\203A";
+    font-size: 17px;
+    padding: 0 7px;
+}
+.category-title {
+    font-size: 28px;
+}
+.category-title span {
+    color: #f67280;
+    text-transform: capitalize;
+}
+
+/* Laptop md */
+@media(min-width: 992px) {
+    .category-title-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 15px;
+    }
+}

@@ -1,0 +1,81 @@
+.about-section {
+    padding-top: 50px;
+}
+.about-section .tags-widget, .about-section .categories-widget {
+    display: none;
+}
+.page-title {
+    position: relative;
+}
+.page-title h2 {
+    font-size: 20px;
+}
+.page-title h2::after {
+    background-color: #f67280;
+    display: block;
+    position: absolute;
+    content: "";
+    left: auto;
+    top: -5px;
+    width: 30px;
+    height: 2px;
+}
+.about-content {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 20px 0px #dddddd;
+    margin-top: 65px;
+    margin-bottom: 50px;
+}
+.about-image {
+    margin-top: -60px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px 0px #dddddd;
+}
+.about-img {
+    border-radius: 20px;
+    display: block;
+}
+.about-discription h6 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.about-discription p {
+    margin-bottom: 15px;
+}
+.quote {
+    background-color: #F9F9FF;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.quote-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f67280;
+    text-align: center;
+    padding-top: 5px;
+}
+.fa-quote-right {
+    color: #ffffff;
+}
+.quote p {
+    color: #152035;
+    font-weight: 900;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.quote span {
+    font-size: small;
+    color: #506172;
+    font-weight: 400;
+
+}

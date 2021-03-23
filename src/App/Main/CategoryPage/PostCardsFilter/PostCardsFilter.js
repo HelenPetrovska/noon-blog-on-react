@@ -1,12 +1,11 @@
 import React from 'react'
-import PostCard from './PostCard/PostCard'
-import postCardsItems from './postCardItems'
-import PostPagination from './PostPagination/PostPagination'
+
+import PostCard from '../../PostCards/PostCard/PostCard'
+import postCardItems from '../../PostCards/postCardItems'
 
 
-import "./postCards.css"
 
-const PostCards = ({
+const PostCardsFilter = ({
     category,
     changeCategory
 }) => {
@@ -15,7 +14,7 @@ const PostCards = ({
             <div className="container-fluid">
                 <div className="post-cards-row">
                     {
-                        postCardsItems.map(({
+                        postCardItems.filter(post => post.categorieLink===category).map(({
                             id,
                             postImg,
                             categorieLink,
@@ -35,17 +34,15 @@ const PostCards = ({
                                     authorImg={authorImg}
                                     authorName={authorName}
                                     postDate={postDate}
-                                    category={category}
                                     changeCategory={changeCategory}
                                 />
                             )
                         })
                     }
                 </div>
-                <PostPagination/>
             </div>
         </section>
     )
 }
 
-export default PostCards
+export default PostCardsFilter

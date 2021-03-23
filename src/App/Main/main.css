@@ -1,0 +1,17 @@
+.blog-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "blog-content"
+    "sidebar";
+    grid-gap: 15px;
+}
+
+/* Laptop md */
+@media(min-width: 992px) {
+	.blog-row {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "blog-content sidebar";
+	}
+}

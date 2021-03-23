@@ -3,6 +3,7 @@
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 50px;
+    background-color: #ffffff;
 }
 .post-image {
     margin-top: -60px;
@@ -30,6 +31,7 @@
     transition: all 0.3s ease-in-out;
     display: inline-block;
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 .post-title {
     margin-bottom: 10px;

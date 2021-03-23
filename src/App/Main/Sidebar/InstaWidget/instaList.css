@@ -1,0 +1,17 @@
+.insta-widget-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.insta-widget-item {
+    border-radius: 5px;
+    overflow: hidden;
+}
+.insta-img {
+    border-radius: 5px;
+    transition: all 0.9s ease-in-out;
+}
+.insta-img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,17 @@
+.categorie-widget-item {
+    background-color: #F9F9FF;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.categorie-widget-item .categorie-link {
+    margin-bottom: 0;
+}
+.categorie-count {
+    color: #506172;
+    font-size: 14px;
+    font-weight: 700;
+}

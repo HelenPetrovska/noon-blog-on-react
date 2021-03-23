@@ -6,14 +6,20 @@ import "./header.css"
 import Logo from './Logo/Logo'
 import Menu from './Menu/Menu'
 
-const Header = () => {
+const Header = ({
+    category,
+    changeCategory
+}) => {
     return (
         <header className="header">
             <div className="container-fluid">
                 <div className="header-row">
 
                     <Logo/>
-                    <Menu/>
+                    <Menu
+                        category={category}
+                        changeCategory={changeCategory}
+                    />
                     <HeaderLinks/>
 
                 </div>

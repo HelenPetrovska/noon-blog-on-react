@@ -1,15 +1,39 @@
 import React from 'react'
-import Swiper from './Slider/Slider'
 import PostCards from './PostCards/PostCards'
-import Subscribe from './Subscribe/Subscribe'
+import { Route } from 'react-router'
+import CategoryPage from './CategoryPage/CategoryPage'
+import SimpleSlider from './Slider/Slider'
+import AboutPage from './AboutPage/AboutPage'
 
+import './main.css'
 
-const Main = () => {
+const Main = ({
+    category,
+    changeCategory
+}) => {
     return (
         <main className="main">
-            <Swiper/>
-            <PostCards/>
-            <Subscribe/>
+            <Route path="/" exact render={() => (
+                <>
+                    <SimpleSlider
+                        category={category}
+                        changeCategory={changeCategory}
+                    />
+                    <PostCards
+                        category={category}
+                        changeCategory={changeCategory}
+                    />
+                </>
+            )}/>
+            <Route path="/category/" render = {() => (
+                <CategoryPage
+                    category={category}
+                    changeCategory={changeCategory}
+                />
+            )}/>
+            <Route path="/about" render = {() => (
+                <AboutPage/>
+            )}/>
         </main>
     )
 }

@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 
 import "./postCard.css"
 
@@ -10,7 +12,9 @@ const PostCard = ({
     postText,
     authorImg,
     authorName,
-    postDate
+    postDate,
+    category,
+    changeCategory
 }) => {
 
     return (
@@ -21,7 +25,7 @@ const PostCard = ({
                 </a>
             </div>
             <div className="post-content">
-                <a href="#" className="categorie-link">{categorieLink}</a>
+                <Link to={`/category/${categorieLink}`} onClick={() => changeCategory(categorieLink)} className="categorie-link">{categorieLink}</Link>
                 <h5 className="post-title">
                     <a href="#" className="post-title-link">{postTitle}</a>
                 </h5>
