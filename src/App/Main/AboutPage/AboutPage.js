@@ -1,24 +1,24 @@
 import React from 'react'
-import Sidebar from '../CategoryPage/Sidebar/Sidebar'
+import Sidebar from '../Sidebar/Sidebar'
 
 import './aboutPage.css'
 import AboutImage from './about.jpg'
 
 const AboutPage = () => {
     return (
-        <section className="about-section">
+        <section className="page-section">
             <div className="container-fluid">
-                <div className="about-row">
+                <div className="page-row">
                     <div className="page-title">
                         <h2>About Us</h2>
                     </div>
                     <div className="blog-row">
                         <div className="blog-content">
-                            <div className="about-content">
-                                <div className="about-image">
-                                    <img src={AboutImage} className="about-img" alt="about-img"/>
+                            <div className="page-content">
+                                <div className="page-image">
+                                    <img src={AboutImage} className="page-img" alt="page-img"/>
                                 </div>
-                                <div className="about-discription">
+                                <div className="page-discription">
                                     <h6>Thank you for checking out our blog website.</h6>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus facere, nemo dignissimos, in labore nostrum provident perferendis minima accusamus aliquam reprehenderit autem</p>
                                     <p>Praesentium sunt beatae libero non totam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus facere, nemo dignissimos, in labore nostrum provident perferendis minima accusamus aliquam reprehenderit autem praesentium sunt beatae libero non totam.</p>

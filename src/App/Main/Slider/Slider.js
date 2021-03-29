@@ -43,7 +43,7 @@ const SimpleSlider = ({
                             </h5>   
                             <div className="slide-info">
                                 <div className="author-name">
-                                    <a href="#" className="author-name-link">{post.authorName}</a>
+                                    <Link to="/author" className="author-name-link">{post.authorName}</Link>
                                 </div>
                                 <div className="slide-dot"></div>
                                 <div>

@@ -1,36 +1,63 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
 import "./menu.css"
 
-const Menu = ({
-    category,
-    changeCategory
-}) => {
-    return (
-        <div className="menu">
-            <nav className="nav navigation hidden-menu">
-                <ul className="menu-list">
-                    <li className="menu-item"><Link to="/" className="menu-link menu-link-active">Home</Link></li>
-                    <li className="menu-item categories-item">
-                        <a href="#" className="menu-link categories-link">Categories</a>
-                        <ul className="submenu-list">
-                            <li><Link to="/category/livestyle" onClick={() => changeCategory('livestyle')} className="menu-link submenu-link">Livestyle</Link></li>
-                            <li><Link to="/category/travel" onClick={() => changeCategory('travel')} className="menu-link submenu-link">Travel</Link></li>
-                            <li><Link to="/category/food" onClick={() => changeCategory('food')} className="menu-link submenu-link">Food</Link></li>
-                        </ul>
-                    </li>
-                    <li className="menu-item"><Link to="/about" className="menu-link">About</Link></li>
-                    <li className="menu-item"><a href="#" className="menu-link">Contact</a></li>
-                </ul>
-            </nav>
-            <div className="nav-mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+class Menu extends Component {
+
+    state = {
+        mobileMenu: false,
+        submenu: false
+    }
+
+    toggleMobileMenu = () => {
+        this.setState((prevState) => {
+            return {
+                mobileMenu: !prevState.mobileMenu
+            }
+        })
+    }
+
+    toggleSubmenu = () => {
+        this.setState((prevState) => {
+            return {
+                submenu: !prevState.submenu
+            }
+        })
+    }
+
+    render() {
+
+        const {
+            category,
+            changeCategory,
+        } = this.props
+
+        return (
+            <div className="menu">
+                <nav className= {this.state.mobileMenu ? "nav navigation active-menu" : "nav navigation hidden-menu"}>
+                    <ul className="menu-list">
+                        <li className="menu-item"><Link to="/" className="menu-link menu-link-active" onClick={() => this.toggleMobileMenu()}>Home</Link></li>
+                        <li className="menu-item categories-item">
+                            <Link to="/" onClick = {() => this.toggleSubmenu()} className= "menu-link categories-link">Categories</Link>
+                            <ul className = {this.state.submenu ? "submenu-list show" : "submenu-list hide"}>
+                                <li><Link to="/category/livestyle" onClick={() => (changeCategory('livestyle'), this.toggleMobileMenu())} className="menu-link submenu-link">Livestyle</Link></li>
+                                <li><Link to="/category/travel" onClick={() => (changeCategory('travel'), this.toggleMobileMenu())} className="menu-link submenu-link">Travel</Link></li>
+                                <li><Link to="/category/food" onClick={() => (changeCategory('food'), this.toggleMobileMenu())} className="menu-link submenu-link">Food</Link></li>
+                            </ul>
+                        </li>
+                        <li className="menu-item"><Link to="/about" onClick={() => this.toggleMobileMenu()} className="menu-link">About</Link></li>
+                        <li className="menu-item"><Link to="/contact" onClick={() => this.toggleMobileMenu()} className="menu-link">Contact</Link></li>
+                    </ul>
+                </nav>
+                <div className="nav-mobile-menu" onClick={() => this.toggleMobileMenu()}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Menu

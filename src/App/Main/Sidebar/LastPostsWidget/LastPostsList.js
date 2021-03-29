@@ -1,6 +1,6 @@
 import React from 'react'
 
-import postCardItems from '../../../PostCards/postCardItems'
+import postCardItems from '../../PostCards/postCardItems'
 import LastPost from './LastPost'
 
 const LastPostsList = () => {

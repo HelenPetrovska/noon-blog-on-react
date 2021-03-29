@@ -12,7 +12,16 @@ import Footer from './Footer/Footer'
 class App extends Component {
 
     state = {
-        category: 'travel'
+        category: 'travel',
+        inFavorites: false,
+    }
+
+    addFavorite = () => {
+        this.setState((prevState) => {
+            return {
+                inFavorites: !prevState.inFavorites
+            }
+        })
     }
 
     changeCategory = ((name) => {
@@ -29,6 +38,8 @@ class App extends Component {
                 <Main
                     category={this.state.category}
                     changeCategory={this.changeCategory}
+                    addFavorite={this.addFavorite}
+                    inFavorites={this.state.inFavorites}
                 />
                 <Subscribe/>
                 <Footer/>

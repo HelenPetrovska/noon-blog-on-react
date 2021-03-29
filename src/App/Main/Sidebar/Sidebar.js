@@ -6,6 +6,7 @@ import LastPostsList from './LastPostsWidget/LastPostsList'
 import TagsList from './TagsWidget/TagsList'
 
 import './sidebar.css'
+import AuthorWidget from './AuthorWidget/AuthorWidget'
 
 
 
@@ -14,6 +15,9 @@ const Sidebar = ({
 }) => {
     return (
         <div className="sidebar-row">
+            <div className="widget author-widget">
+                <AuthorWidget/>
+            </div>
             <div className="widget">
                 <h5 className="widget-title">Latest Posts</h5>
                 <LastPostsList/>

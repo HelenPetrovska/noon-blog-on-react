@@ -8,7 +8,9 @@ import "./postCards.css"
 
 const PostCards = ({
     category,
-    changeCategory
+    changeCategory,
+    addFavorite,
+    inFavorites
 }) => {
     return (
         <section className="post-cards">
@@ -37,6 +39,8 @@ const PostCards = ({
                                     postDate={postDate}
                                     category={category}
                                     changeCategory={changeCategory}
+                                    addFavorite={addFavorite}
+                                    inFavorites={inFavorites}
                                 />
                             )
                         })

@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import "./postCard.css"
 
 
+
 const PostCard = ({
     postImg,
     categorieLink,
@@ -14,8 +15,11 @@ const PostCard = ({
     authorName,
     postDate,
     category,
-    changeCategory
+    changeCategory,
+    inFavorites,
+    addFavorite,
 }) => {
+
 
     return (
         <div className="post-card">
@@ -25,17 +29,24 @@ const PostCard = ({
                 </a>
             </div>
             <div className="post-content">
-                <Link to={`/category/${categorieLink}`} onClick={() => changeCategory(categorieLink)} className="categorie-link">{categorieLink}</Link>
+                <div className="categorie-favorit">
+                    <Link to={`/category/${categorieLink}`} onClick={() => changeCategory(categorieLink)} className="categorie-link">{categorieLink}</Link>
+
+                    <button className="favorite-btn" title={inFavorites ? 'Remove from Favorites' : 'Add to Favorites'} onClick={() => addFavorite()}>
+                        {inFavorites ? <span className="liked"></span> : <span className="noliked"></span>} 
+                    </button>
+                    
+                </div>
                 <h5 className="post-title">
                     <a href="#" className="post-title-link">{postTitle}</a>
                 </h5>
                 <p className="post-text">{postText}</p>
                 <div className="post-info">
                     <div className="author">
-                        <a href="#" className="author-link"><img src={authorImg} alt="author-img" className="author-img"/></a>
+                        <Link to="/author" className="author-link"><img src={authorImg} alt="author-img" className="author-img"/></Link>
                     </div>
                     <div className="author-name">
-                        <a href="#" className="author-name-link">{authorName}</a>
+                        <Link to="/author" className="author-name-link">{authorName}</Link>
                     </div>
                     <div className="dot"></div>
                     <div>

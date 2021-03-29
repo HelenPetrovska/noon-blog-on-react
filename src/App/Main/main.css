@@ -1,3 +1,25 @@
+.page-section {
+    padding-top: 50px;
+}
+.page-section .tags-widget, .page-section .categories-widget {
+    display: none;
+}
+.page-title {
+    position: relative;
+}
+.page-title h2 {
+    font-size: 20px;
+}
+.page-title h2::after {
+    background-color: #f67280;
+    display: block;
+    position: absolute;
+    content: "";
+    left: auto;
+    top: -5px;
+    width: 30px;
+    height: 2px;
+}
 .blog-row {
     display: grid;
     grid-template-columns: 1fr;
@@ -6,7 +28,31 @@
     "sidebar";
     grid-gap: 15px;
 }
-
+.page-content {
+    padding: 40px 30px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 20px 0px #dddddd;
+    margin-top: 65px;
+    margin-bottom: 50px;
+}
+.page-image {
+    margin-top: -60px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px 0px #dddddd;
+}
+.page-img {
+    border-radius: 20px;
+    display: block;
+}
+.page-discription h6 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.page-discription p {
+    margin-bottom: 15px;
+}
 /* Laptop md */
 @media(min-width: 992px) {
 	.blog-row {

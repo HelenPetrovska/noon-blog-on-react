@@ -160,7 +160,7 @@
     line-height: 1.4;
     transition: all 0.3s ease-in-out;
 }
-.slide-title-link:hover{
+.slide-title-link:hover, .slide-info .author-name-link:hover{
     color: #f67280;
 }
 .slide-info {
@@ -170,7 +170,7 @@
 .slide-info .author-name-link {
     color: #ffffff;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 700;
     transition: all 0.3s ease-in-out;
 }
 .slide-dot {
@@ -184,7 +184,7 @@
 .slide-date {
     color: #ffffff;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 /* tablet sm*/

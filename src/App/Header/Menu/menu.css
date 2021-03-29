@@ -22,9 +22,6 @@
 .menu-link:hover {
     color: #f67280;
 }
-.menu-item:hover .submenu-list {
-    display: block;
-}
 .menu-item:hover>.menu-link {
     color: #f67280;
 }
@@ -55,6 +52,12 @@
 .categories-link:hover::after {
     color: #f67280;
 }
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
 
 /* laptop md*/
 @media(min-width:992px) {
@@ -62,6 +65,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .menu-item:hover .submenu-list {
+        display: block;
     }
 }
 
@@ -104,20 +110,14 @@
     }
     .navigation {
         width: 100%;
-        height: 100%;
-        top: 0;
+        top: 70px;
         left: 0;
-        right: 0;
-        bottom: 0;
         position: fixed;
-        transform: translateX(150%);
-        transition: all 500ms ease-in-out;
-        padding: 50px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 30% 0;
-        justify-content: center;
-        z-index: 19;
+        transform: translateX(100%);
+        transition: all 350ms ease-in-out;
+        background-color: #ffffff;
+        justify-content: left;
+        z-index: 10;
     }
     .nav-mobile-menu.active-menu span:nth-child(1) {
         top: 50%;
@@ -139,15 +139,35 @@
     .menu-list {
         height: 100%;
         flex-direction: column;
-        justify-content: center;
+        align-items: flex-start;
+        padding-left: 15px;
     }
     .menu-item {
         display: flex;
         padding: 8px;
     }
+    .categories-item {
+        flex-direction: column;
+        width: 100%;
+    }
     .menu-link {
-        font-size: 30px;
+        font-size: 16px;
         padding: 3px;
-        text-transform: uppercase;
+        text-transform: capitalize;
+        transition: all 0.5s ease-in-out;
+    }
+    .submenu-list {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 10px 20px;
+        background-color: #F9F9FF;
+        box-shadow: none;
+    }
+    .submenu-link {
+        font-size: 14px;
+        margin-top: 7px;
+        margin-bottom: 7px;
     }
 }

@@ -1,0 +1,33 @@
+.form-field {
+    margin-bottom: 20px;
+}
+.form-field textarea {
+    resize: vertical;
+}
+.form-input {
+    width: 100%;
+    background-color: #F9F9FF;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 20px 20px;
+    font-size: 14px;
+    color: #152035;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    outline: none;
+}
+.form-input:hover, .form-input:focus {
+    box-shadow: 0px 5px 20px 0px #dddddd;
+}
+.form-input::placeholder {
+    font-family: 'Mulish', sans-serif;
+}
+.form-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.form-btn:hover {
+    background-color: #506172;
+}

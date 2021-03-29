@@ -4,12 +4,17 @@ import { Route } from 'react-router'
 import CategoryPage from './CategoryPage/CategoryPage'
 import SimpleSlider from './Slider/Slider'
 import AboutPage from './AboutPage/AboutPage'
+import ContactPage from './ContactPage/ContactPage'
+import AuthorPage from './AuthorPage/AuthorPage'
+
 
 import './main.css'
 
 const Main = ({
     category,
-    changeCategory
+    changeCategory,
+    addFavorite,
+    inFavorites
 }) => {
     return (
         <main className="main">
@@ -22,6 +27,8 @@ const Main = ({
                     <PostCards
                         category={category}
                         changeCategory={changeCategory}
+                        addFavorite={addFavorite}
+                        inFavorites={inFavorites}
                     />
                 </>
             )}/>
@@ -33,6 +40,12 @@ const Main = ({
             )}/>
             <Route path="/about" render = {() => (
                 <AboutPage/>
+            )}/>
+            <Route path="/contact" render = {() => (
+                <ContactPage/>
+            )}/>
+            <Route path="/author" render ={() => (
+                <AuthorPage/>
             )}/>
         </main>
     )

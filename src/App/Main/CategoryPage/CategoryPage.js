@@ -1,10 +1,10 @@
 import React from 'react'
 
-import './categoryPage.css'
-
 import PostCardsFilter from './PostCardsFilter/PostCardsFilter'
 import CategoryTitle from './CategoryTitle/CategoryTitle'
-import Sidebar from './Sidebar/Sidebar'
+import Sidebar from '../Sidebar/Sidebar'
+
+import './categoryPage.css'
 
 const CategoryPage = ({
     category,

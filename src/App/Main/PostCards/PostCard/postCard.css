@@ -20,6 +20,12 @@
 .post-img:hover {
     transform: scale(1.1);
 }
+.categorie-favorit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
 .categorie-link {
     color: #ffffff;
     font-size: 13px;
@@ -30,8 +36,26 @@
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
     display: inline-block;
-    margin-bottom: 20px;
     text-transform: capitalize;
+}
+.favorite-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+.liked, .noliked {
+    width: 23px;
+    height: 23px;
+    display: block;
+    background-repeat: no-repeat;
+}
+.liked {
+    background-image: url(./liked.png);
+} 
+.noliked {
+    background-image: url(./noliked.png);
 }
 .post-title {
     margin-bottom: 10px;
