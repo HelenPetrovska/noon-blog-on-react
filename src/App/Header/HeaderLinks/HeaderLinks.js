@@ -6,11 +6,18 @@ import HeaderSearch from './HeaderSearch/HeaderSearch'
 import "./headerLinks.css"
 
 
-const HeaderLinks = () => {
+const HeaderLinks = ({
+    toggleModal,
+    modal
+
+}) => {
     return (
         <div className="header-links">
             <HeaderSocial/>
-            <HeaderSearch/>
+            <HeaderSearch
+                toggleModal={toggleModal}
+                modal={modal}
+            />
         </div>
     )
 }

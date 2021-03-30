@@ -8,7 +8,9 @@ import Menu from './Menu/Menu'
 
 const Header = ({
     category,
-    changeCategory
+    changeCategory,
+    toggleModal,
+    modal
 }) => {
     return (
         <header className="header">
@@ -20,7 +22,10 @@ const Header = ({
                         category={category}
                         changeCategory={changeCategory}
                     />
-                    <HeaderLinks/>
+                    <HeaderLinks
+                        toggleModal={toggleModal}
+                        modal={modal}
+                    />
 
                 </div>
             </div>

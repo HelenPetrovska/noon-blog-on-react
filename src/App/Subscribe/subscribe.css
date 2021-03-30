@@ -21,36 +21,6 @@
     margin-bottom: 30px;
     text-align: center;
 }
-.subscribe-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 50px;
-}
-.subscribe-input {
-    width: 100%;
-    height: 45px;
-    color: #506172;
-    background-color: #ffffff;
-    border: none;
-    outline: none;
-    padding: 0px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-.subscribe-btn {
-    width: 100%;
-    height: 45px;
-    border-radius: 20px;
-    color: #ffffff;
-    font-weight: 700;
-    transition: all 0.5s ease-in-out;
-    margin-top: 10px;
-}
-.subscribe-btn:hover {
-    background-color: #506172;
-}
 .subscribe-list {
     display: flex;
     flex-wrap: wrap;
@@ -73,42 +43,3 @@
 .subscribe-link>i{
     margin-right: 7px;
 }
-
-@media(min-width: 425px) {
-    .subscribe-form {
-        flex-direction: row;
-    }
-    .subscribe-field {
-        width: 65%;
-    }
-    .subscribe-input {
-        width: 100%;
-        border-radius: 20px 0 0 20px;
-    }
-    .subscribe-btn {
-        width: 35%;
-        border-radius: 0 20px 20px 0;
-        margin-top: 0;
-    }
-}
-
-/* tablet sm*/
-@media(min-width: 768px) {
-    .subscribe-form {
-        width: 80%;
-    }
-}
-
-/* laptop md*/
-@media(min-width:992px) {
-    .subscribe-form {
-        width: 60%;
-    }
-}
-/* desctop lg*/
-@media(min-width:1200px) {
-    .subscribe-form {
-        width: 50%;
-    }
-}
-

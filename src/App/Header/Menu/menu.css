@@ -52,12 +52,6 @@
 .categories-link:hover::after {
     color: #f67280;
 }
-.show {
-    display: block;
-}
-.hide {
-    display: none;
-}
 
 /* laptop md*/
 @media(min-width:992px) {
