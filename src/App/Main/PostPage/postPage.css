@@ -1,0 +1,6 @@
+.post-section .tags-widget, .post-section .categories-widget, .post-section .author-widget {
+    display: block !important;
+}
+.post-section .author-categorie-link {
+    display: none;
+}

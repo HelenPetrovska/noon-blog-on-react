@@ -22,6 +22,7 @@ const PostCards = ({
                             postImg,
                             categorieLink,
                             postTitle,
+                            post_Title,
                             postText,
                             authorImg,
                             authorName,
@@ -30,9 +31,11 @@ const PostCards = ({
                             return (
                                 <PostCard 
                                     key={id}
+                                    id={id}
                                     postImg={postImg}
                                     categorieLink={categorieLink}
                                     postTitle={postTitle}
+                                    post_Title={post_Title}
                                     postText={postText}
                                     authorImg={authorImg}
                                     authorName={authorName}

@@ -10,10 +10,8 @@ const AuthorPage = () => {
     return (
         <section className="page-section">
             <div className="container-fluid">
-                <div className="author-row">
-                    <AuthorWidget/>
-                    <PostCards/>
-                </div>
+                <AuthorWidget/>
+                <PostCards/>
             </div>
         </section>
 

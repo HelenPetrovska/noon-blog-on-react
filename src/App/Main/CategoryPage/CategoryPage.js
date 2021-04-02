@@ -8,28 +8,28 @@ import './categoryPage.css'
 
 const CategoryPage = ({
     category,
-    changeCategory
+    changeCategory,
+    match
 }) => {
+    console.log(match)
     return (
         <section className="category-section">
             <div className="container-fluid">
-                <div className="category-row">
-                    <CategoryTitle
-                        category={category}
-                    />
-                    <div className="blog-row">
-                        <div className="blog-content">
-                            <PostCardsFilter
-                                category={category}
-                                changeCategory={changeCategory}
-                            />
-                        </div>
-                        <Sidebar
+                <CategoryTitle
+                    category={category}
+                />
+                <div className="blog-row">
+                    <div className="blog-content">
+                        <PostCardsFilter
+                            category={category}
                             changeCategory={changeCategory}
                         />
                     </div>
+                    <Sidebar
+                        changeCategory={changeCategory}
+                    />
                 </div>
-            </div>
+            </div> 
         </section>
     )
 }

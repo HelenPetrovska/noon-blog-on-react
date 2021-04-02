@@ -3,6 +3,7 @@
 }
 .menu-item {
     position: relative;
+    cursor: pointer;
 }
 .menu-list {
     display: flex;
@@ -18,6 +19,7 @@
     padding-right: 15px;
     outline: none;
     display: block;
+    cursor: pointer;
 }
 .menu-link:hover {
     color: #f67280;
@@ -28,12 +30,12 @@
 .submenu-list {
     background-color: #ffffff;
     width: 120px;
-    display: none;
     position: absolute;
     left: 15px;
     top: 25px;
     border-radius: 4px;
     box-shadow: 0px 5px 10px 0px #9e9e9e;
+    display: none;
     z-index: 1;
 }
 .submenu-link {
@@ -52,7 +54,9 @@
 .categories-link:hover::after {
     color: #f67280;
 }
-
+.categories-item-desktop {
+    display: none !important;
+}
 /* laptop md*/
 @media(min-width:992px) {
     .menu {
@@ -62,6 +66,12 @@
     }
     .menu-item:hover .submenu-list {
         display: block;
+    }
+    .categories-item-desktop {
+        display: block !important;
+    }
+    .categories-item-mobile {
+        display: none;
     }
 }
 

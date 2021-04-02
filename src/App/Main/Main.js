@@ -1,12 +1,13 @@
 import React from 'react'
-import PostCards from './PostCards/PostCards'
 import { Route } from 'react-router'
+
+import PostCards from './PostCards/PostCards'
 import CategoryPage from './CategoryPage/CategoryPage'
 import SimpleSlider from './Slider/Slider'
 import AboutPage from './AboutPage/AboutPage'
 import ContactPage from './ContactPage/ContactPage'
 import AuthorPage from './AuthorPage/AuthorPage'
-
+import PostPage from './PostPage/PostPage'
 
 import './main.css'
 
@@ -47,6 +48,7 @@ const Main = ({
             <Route path="/author" render ={() => (
                 <AuthorPage/>
             )}/>
+            <Route path={`/${category}/post/:postTitle`} component = {PostPage}/>
         </main>
     )
 }

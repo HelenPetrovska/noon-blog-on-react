@@ -8,6 +8,7 @@ const postCardItems = [
         postImgBig:"/images/postBig1.jpg",
         categorieLink:"livestyle",
         postTitle:"How to Choose Outfits for Work for woman and men",
+        post_Title:"How-to-Choose-Outfits-for-Work-for-woman-and-men",
         postText:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quam atque ipsa laborum sunt distinctio...",
         authorImg:"/images/author.jpg",
         authorName:"David Smith",
@@ -20,6 +21,7 @@ const postCardItems = [
         postImgBig:"/images/postBig2.jpg",
         categorieLink:"travel",
         postTitle:"10 Easy Tips for You to Traveling Around the World!",
+        post_Title:"10-Easy-Tips-for-You-to-Traveling-Around-the-World!",
         postText:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quam atque ipsa laborum sunt distinctio...",
         authorImg:"/images/author.jpg",
         authorName:"David Smith",
@@ -114,5 +116,10 @@ const postCardItems = [
         nb:"9"
     }
 ]
+
+export const getPostCardItemsObject = array => array.reduce((obj,post) => ({
+    ...obj,
+    [post.id]:post
+}), {})
 
 export default postCardItems

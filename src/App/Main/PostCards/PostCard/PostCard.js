@@ -1,15 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-
 import "./postCard.css"
 
-
-
 const PostCard = ({
+    id,
     postImg,
     categorieLink,
     postTitle,
+    post_Title,
     postText,
     authorImg,
     authorName,
@@ -17,9 +16,8 @@ const PostCard = ({
     category,
     changeCategory,
     inFavorites,
-    addFavorite,
+    addFavorite
 }) => {
-
 
     return (
         <div className="post-card">
@@ -38,7 +36,7 @@ const PostCard = ({
                     
                 </div>
                 <h5 className="post-title">
-                    <a href="#" className="post-title-link">{postTitle}</a>
+                    <Link to={`/${category}/post/${post_Title}`} className="post-title-link">{postTitle}</Link>
                 </h5>
                 <p className="post-text">{postText}</p>
                 <div className="post-info">
@@ -55,6 +53,7 @@ const PostCard = ({
                 </div>
             </div>
         </div>
+
     )
 }
 

@@ -1,3 +1,6 @@
+.about-section .author-widget {
+    display: none;
+}
 .quote {
     background-color: #F9F9FF;
     padding: 20px;
@@ -30,5 +33,4 @@
     font-size: small;
     color: #506172;
     font-weight: 400;
-
 }

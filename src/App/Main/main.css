@@ -1,11 +1,9 @@
-.page-section {
-    padding-top: 50px;
-}
-.page-section .tags-widget, .page-section .categories-widget {
+.page-section .tags-widget, .page-section .categories-widget, .page-section .author-widget {
     display: none;
 }
 .page-title {
     position: relative;
+    margin-top: 50px;
 }
 .page-title h2 {
     font-size: 20px;

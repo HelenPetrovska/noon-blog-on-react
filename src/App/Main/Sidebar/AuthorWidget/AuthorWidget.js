@@ -12,7 +12,7 @@ const AuthorWidget = () => {
                 <img src={AuthorImage} className="author-img" alt="author-img"/>
             </Link>
             <h6 className="author-title">Hi, I'm David Smith</h6>
-            <div className="categorie-link">9 Articles</div>
+            <div className="categorie-link author-categorie-link">9 Articles</div>
             <p className="author-discription">I'm David Smith, husband and father , I love Photography,travel and nature. I'm working as a writer and blogger with experience of 5 years until now.</p>
             <div className="author-social">
                 <ul className="social-list">
