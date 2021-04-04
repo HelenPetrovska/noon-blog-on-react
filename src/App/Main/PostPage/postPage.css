@@ -4,3 +4,10 @@
 .post-section .author-categorie-link {
     display: none;
 }
+.post-section .post-title {
+    margin-bottom: 20px;
+}
+.post-section .post-description {
+    order: 2;
+    margin-top: 20px;
+}

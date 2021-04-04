@@ -8,7 +8,7 @@ import './authorPage.css'
 
 const AuthorPage = () => {
     return (
-        <section className="page-section">
+        <section className="page-section author-section">
             <div className="container-fluid">
                 <AuthorWidget/>
                 <PostCards/>

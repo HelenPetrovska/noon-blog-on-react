@@ -1,12 +1,12 @@
 /* tablet sm*/
 @media(min-width: 768px) {
-    .author-row .author-list {
+    .author-section .author-list {
         width: 600px;
     }
 }
 /* laptop md*/
 @media(min-width:992px) {
-    .author-row .post-cards-row {
+    .author-section .post-cards-row {
         grid-template-columns: repeat(2, 1fr);
     }
 }

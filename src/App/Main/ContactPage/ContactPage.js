@@ -17,7 +17,7 @@ const ContactPage = () => {
                             <div className="page-image">
                                 <img src={ContactImage} className="page-img" alt="page-img"/>
                             </div>
-                            <div className="page-discription">
+                            <div className="page-description">
                                 <h6>Feel free to contact any time.</h6>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, repudiandae.</p>
                             </div>

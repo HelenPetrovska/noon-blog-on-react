@@ -17,7 +17,7 @@ const AboutPage = () => {
                             <div className="page-image">
                                 <img src={AboutImage} className="page-img" alt="page-img"/>
                             </div>
-                            <div className="page-discription">
+                            <div className="page-description">
                                 <h6>Thank you for checking out our blog website.</h6>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus facere, nemo dignissimos, in labore nostrum provident perferendis minima accusamus aliquam reprehenderit autem</p>
                                 <p>Praesentium sunt beatae libero non totam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus facere, nemo dignissimos, in labore nostrum provident perferendis minima accusamus aliquam reprehenderit autem praesentium sunt beatae libero non totam.</p>

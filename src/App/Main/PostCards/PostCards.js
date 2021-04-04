@@ -23,7 +23,7 @@ const PostCards = ({
                             categorieLink,
                             postTitle,
                             post_Title,
-                            postText,
+                            postDescription,
                             authorImg,
                             authorName,
                             postDate
@@ -36,7 +36,7 @@ const PostCards = ({
                                     categorieLink={categorieLink}
                                     postTitle={postTitle}
                                     post_Title={post_Title}
-                                    postText={postText}
+                                    postDescription={postDescription}
                                     authorImg={authorImg}
                                     authorName={authorName}
                                     postDate={postDate}

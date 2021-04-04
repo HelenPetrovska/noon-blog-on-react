@@ -48,7 +48,15 @@ const Main = ({
             <Route path="/author" render ={() => (
                 <AuthorPage/>
             )}/>
-            <Route path={`/${category}/post/:postTitle`} component = {PostPage}/>
+            <Route path={`/${category}/post/:postTitle`} render = {({match}) => (
+                <PostPage
+                    match={match}
+                    category={category}
+                    changeCategory={changeCategory}
+                    addFavorite={addFavorite}
+                    inFavorites={inFavorites}
+                />
+            )}/>
         </main>
     )
 }

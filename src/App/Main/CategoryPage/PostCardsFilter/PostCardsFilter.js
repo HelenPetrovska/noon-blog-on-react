@@ -19,7 +19,7 @@ const PostCardsFilter = ({
                             postImg,
                             categorieLink,
                             postTitle,
-                            postText,
+                            postDescription,
                             authorImg,
                             authorName,
                             postDate
@@ -30,7 +30,7 @@ const PostCardsFilter = ({
                                     postImg={postImg}
                                     categorieLink={categorieLink}
                                     postTitle={postTitle}
-                                    postText={postText}
+                                    postDescription={postDescription}
                                     authorImg={authorImg}
                                     authorName={authorName}
                                     postDate={postDate}

@@ -11,7 +11,7 @@ const SearchModal = ({
         <section className={modal ? "modal-section show" : "modal-section hide"}>
             <div className="container-fluid">
                 <div className="modal-row">
-                    <button onClick={() => toggleModal()} className="btn close-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    <button onClick={() => toggleModal()} className="btn close-btn"><i className="fa fa-times" aria-hidden="true"></i></button>
                     <form action="#" className="form">
                         <div className="field">
                             <input className="input" placeholder="What are you looking for?"/>

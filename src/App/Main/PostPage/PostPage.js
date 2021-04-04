@@ -1,21 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import PostTop from '../../Components/PostTop/PostTop'
 import postCardItems, { getPostCardItemsObject } from '../PostCards/postCardItems'
 import Sidebar from '../Sidebar/Sidebar'
 
 import './postPage.css'
 
 const PostPage = ({
+    category,
+    changeCategory,
+    addFavorite,
+    inFavorites,
     match,
-    postCardItemsObject = getPostCardItemsObject(postCardItems)
+    postCardItemsObject = getPostCardItemsObject(postCardItems),
 }) => {
 
     const linkTitle = postCardItems.filter(post => post.post_Title === match.params.postTitle)
 
     const id = linkTitle[0].id
-    
-    console.log(match)
-    console.log(match.params.postTitle)
-    console.log(linkTitle, id)
 
     return (
         <section className="page-section post-section">
@@ -23,9 +25,18 @@ const PostPage = ({
                 <div className="blog-row">
                     <div className="blog-content">
                         <div className="page-content">
-                            <div className="page-image">
-                                <img src={postCardItemsObject[id].postImgBig} className="page-img"  alt="post-img"/>
-                            </div>  
+                            <PostTop
+                                postImg = {postCardItemsObject[id].postImgBig}
+                                categorieLink = {postCardItemsObject[id].categorieLink}
+                                postTitle = {postCardItemsObject[id].postTitle}
+                                changeCategory = {changeCategory}
+                                inFavorites = {inFavorites}
+                                addFavorite = {addFavorite}
+                                postDescription = {postCardItemsObject[id].postDescription}
+                                authorImg = {postCardItemsObject[id].authorImg}
+                                authorName = {postCardItemsObject[id].authorName}
+                                postDate = {postCardItemsObject[id].postDate}
+                            />
                         </div>
                     </div>
                     <Sidebar/>
