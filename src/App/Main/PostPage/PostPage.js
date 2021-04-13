@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import MiniPost from '../../Components/MiniPost/MiniPost'
 import PostTop from '../../Components/PostTop/PostTop'
+import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
 import Social from '../../Components/Social/Social'
 import TagsItem from '../../Components/TagsItem/TagsItem'
 import postCardItems, { getPostCardItemsObject } from '../PostCards/postCardItems'
@@ -77,6 +78,7 @@ const PostPage = ({
                     />
                 </div>
             </div>
+            <Index/>
         </section>
 
     )

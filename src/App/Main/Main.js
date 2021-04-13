@@ -9,8 +9,10 @@ import ContactPage from './ContactPage/ContactPage'
 import AuthorPage from './AuthorPage/AuthorPage'
 import PostPage from './PostPage/PostPage'
 import TagPage from './TagPage/TagPage'
+import Index from '../Components/ScrollUpBtn/ScrollUpBtn'
 
 import './main.css'
+import FavoritesPage from './FavoritesPage/FavoritesPage'
 
 const Main = ({
     category,
@@ -33,6 +35,7 @@ const Main = ({
                         addFavorite={addFavorite}
                         inFavorites={inFavorites}
                     />
+                    <Index/>
                 </>
             )}/>
             <Route path="/category/" render = {() => (
@@ -50,6 +53,11 @@ const Main = ({
             )}/>
             <Route path="/contact" render = {() => (
                 <ContactPage
+                    changeCategory={changeCategory}
+                />
+            )}/>
+            <Route path="/favorites" render = {() => (
+                <FavoritesPage
                     changeCategory={changeCategory}
                 />
             )}/>

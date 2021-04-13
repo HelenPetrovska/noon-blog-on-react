@@ -1,0 +1,26 @@
+svg {
+    fill: #ffffff;
+    height: 15px;
+    text-align: center; 
+}
+aside.ScrollUpButton__Container.ScrollUpButton__Toggled, aside.ScrollUpButton__Container{
+    border: 2px solid transparent !important;
+    background-color: #f67280 !important;
+    text-align: center;
+    padding-top: 13px;
+    outline: none;
+    bottom: 30px !important;
+}
+aside.ScrollUpButton__Container.ScrollUpButton__Toggled {
+    right: 30px !important;
+}
+aside.ScrollUpButton__Container {
+    right: -80px !important;
+}
+aside.ScrollUpButton__Container.ScrollUpButton__Toggled:hover {
+    border: 2px solid #f67280 !important;
+    background-color: #ffffff !important;
+}
+aside.ScrollUpButton__Container.ScrollUpButton__Toggled:hover:hover svg {
+    fill: #f67280;
+}

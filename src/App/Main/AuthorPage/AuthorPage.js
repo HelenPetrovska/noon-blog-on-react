@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
 import PostCards from '../PostCards/PostCards'
 import AuthorWidget from '../Sidebar/AuthorWidget/AuthorWidget'
 
@@ -13,6 +13,7 @@ const AuthorPage = () => {
                 <AuthorWidget/>
                 <PostCards/>
             </div>
+            <Index/>
         </section>
 
     )

@@ -1,4 +1,5 @@
 import React from 'react'
+import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
 import Title from '../../Components/Title/Title'
 import PostCard from '../PostCards/PostCard/PostCard'
 import postCardItems from '../PostCards/postCardItems'
@@ -60,6 +61,7 @@ const TagPage = ({
                     />
                 </div>
             </div>
+            <Index/>
         </section>
 
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidebar from '../Sidebar/Sidebar'
+import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
 
 import './aboutPage.css'
 import AboutImage from './about.jpg'
@@ -39,6 +40,7 @@ const AboutPage = ({
                     />
                 </div>
             </div>
+            <Index/>
         </section>
 
     )

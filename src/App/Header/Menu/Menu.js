@@ -63,6 +63,8 @@ class Menu extends Component {
                         </li>
                         <li className="menu-item"><Link to="/about" onClick={() => this.toggleMobileMenu()} className="menu-link">About</Link></li>
                         <li className="menu-item"><Link to="/contact" onClick={() => this.toggleMobileMenu()} className="menu-link">Contact</Link></li>
+                        <li className="menu-item"><Link to="/favorites" onClick={() => this.toggleMobileMenu()} className="menu-link">Favorites</Link></li>
+
                     </ul>
                 </nav>
                 <div className="nav-mobile-menu" onClick={() => (this.toggleMobileMenu(), this.hideSubmenu())}>
