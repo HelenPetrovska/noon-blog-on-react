@@ -27,6 +27,18 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
     color: #152035;
 }
+h3 {
+    font-size: 28px;
+}
+h4 {
+    font-size: 24px;
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: 16px;
+}
 .btn {
     background-color: #f67280;
     color: #ffffff;
@@ -44,6 +56,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hide {
     display: none !important;
+}
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.invisible {
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* Tablet sm */

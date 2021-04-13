@@ -7,7 +7,9 @@ import postCardItems from '../../PostCards/postCardItems'
 
 const PostCardsFilter = ({
     category,
-    changeCategory
+    changeCategory,
+    addFavorite,
+    inFavorites
 }) => {
     return (
         <section className="post-cards">
@@ -19,6 +21,7 @@ const PostCardsFilter = ({
                             postImg,
                             categorieLink,
                             postTitle,
+                            post_Title,
                             postDescription,
                             authorImg,
                             authorName,
@@ -30,11 +33,14 @@ const PostCardsFilter = ({
                                     postImg={postImg}
                                     categorieLink={categorieLink}
                                     postTitle={postTitle}
+                                    post_Title={post_Title}
                                     postDescription={postDescription}
                                     authorImg={authorImg}
                                     authorName={authorName}
                                     postDate={postDate}
                                     changeCategory={changeCategory}
+                                    addFavorite={addFavorite}
+                                    inFavorites={inFavorites}
                                 />
                             )
                         })

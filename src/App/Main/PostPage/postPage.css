@@ -5,9 +5,62 @@
     display: none;
 }
 .post-section .post-title {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 .post-section .post-description {
     order: 2;
     margin-top: 20px;
+}
+.post-subtitle, .post-body p  {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.post-single-image {
+    padding: 15px 0;
+}
+.post-single-img {
+    border-radius: 5px;
+}
+.post-single-list {
+    list-style: disc;
+    padding-left: 20px;
+}
+.post-single-list li {
+    padding: 5px 0;
+}
+.tags-social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.prev-next-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.prev-next-links .mini-post {
+    margin-bottom: 0;
+}
+.prev-next-links .categorie-link {
+    margin-bottom: 10px;
+}
+.prev-next-btns .mini-post {
+    margin-bottom: 0;
+}
+.prev-link, .next-link {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 20px 0px #dddddd;
+    margin-bottom: 30px;
+}
+.prev-next-links .nb, .prev-next-links .mini-post-date {
+    display: none;
+}
+.fa-long-arrow-left {
+    margin-right: 5px;
+}
+.fa-long-arrow-right {
+    margin-left: 5px;
 }

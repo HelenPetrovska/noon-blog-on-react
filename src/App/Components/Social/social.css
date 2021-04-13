@@ -1,0 +1,38 @@
+.social .social-item {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.social .social-link {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    margin-right: 2px;
+    transition: all 0.3s ease-in-out;
+    padding-top: 4px;
+}
+.social .social-link:hover {
+    background-color: #F9F9FF;
+}
+.social .fa {
+    color: #ffffff;
+}
+.social .social-link:hover .fa {
+    color: #506172;
+}
+.facebook-official-link {
+    background-color: #3b5998;
+}
+.instagram-link {
+    background-color: #c32aa3;
+}
+.twitter-link {
+    background-color: #1dcaff;
+}
+.youtube-play-link {
+    background-color: #e52d27;
+}
+.pinterest-link {
+    background-color: #bd081c;
+}

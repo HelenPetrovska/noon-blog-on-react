@@ -1,3 +1,7 @@
+.author-section .author-list {
+    padding: 30px 0;
+}
+
 /* tablet sm*/
 @media(min-width: 768px) {
     .author-section .author-list {

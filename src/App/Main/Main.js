@@ -8,6 +8,7 @@ import AboutPage from './AboutPage/AboutPage'
 import ContactPage from './ContactPage/ContactPage'
 import AuthorPage from './AuthorPage/AuthorPage'
 import PostPage from './PostPage/PostPage'
+import TagPage from './TagPage/TagPage'
 
 import './main.css'
 
@@ -17,6 +18,7 @@ const Main = ({
     addFavorite,
     inFavorites
 }) => {
+
     return (
         <main className="main">
             <Route path="/" exact render={() => (
@@ -37,18 +39,24 @@ const Main = ({
                 <CategoryPage
                     category={category}
                     changeCategory={changeCategory}
+                    addFavorite={addFavorite}
+                    inFavorites={inFavorites}
                 />
             )}/>
             <Route path="/about" render = {() => (
-                <AboutPage/>
+                <AboutPage
+                    changeCategory={changeCategory}
+                />
             )}/>
             <Route path="/contact" render = {() => (
-                <ContactPage/>
+                <ContactPage
+                    changeCategory={changeCategory}
+                />
             )}/>
             <Route path="/author" render ={() => (
                 <AuthorPage/>
             )}/>
-            <Route path={`/${category}/post/:postTitle`} render = {({match}) => (
+            <Route path={`/post/:postTitle`} render = {({match}) => (
                 <PostPage
                     match={match}
                     category={category}
@@ -57,6 +65,16 @@ const Main = ({
                     inFavorites={inFavorites}
                 />
             )}/>
+            <Route path={`/tag/:postTag`} render = {({match}) => (
+                <TagPage
+                    match={match}
+                    category={category}
+                    changeCategory={changeCategory}
+                    addFavorite={addFavorite}
+                    inFavorites={inFavorites}
+                />
+            )}/>
+
         </main>
     )
 }

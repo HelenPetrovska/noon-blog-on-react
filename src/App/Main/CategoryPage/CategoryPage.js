@@ -1,28 +1,31 @@
 import React from 'react'
 
 import PostCardsFilter from './PostCardsFilter/PostCardsFilter'
-import CategoryTitle from './CategoryTitle/CategoryTitle'
 import Sidebar from '../Sidebar/Sidebar'
+import Title from '../../Components/Title/Title'
 
 import './categoryPage.css'
 
 const CategoryPage = ({
     category,
     changeCategory,
-    match
+    addFavorite,
+    inFavorites
 }) => {
-    console.log(match)
+
     return (
         <section className="category-section">
             <div className="container-fluid">
-                <CategoryTitle
-                    category={category}
+                <Title
+                    title={category}
                 />
                 <div className="blog-row">
                     <div className="blog-content">
                         <PostCardsFilter
                             category={category}
                             changeCategory={changeCategory}
+                            addFavorite={addFavorite}
+                            inFavorites={inFavorites}
                         />
                     </div>
                     <Sidebar

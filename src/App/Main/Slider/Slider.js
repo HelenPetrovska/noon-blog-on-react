@@ -38,9 +38,9 @@ const SimpleSlider = ({
                             <div>
                                 <Link to={`/category/${post.categorieLink}`} onClick={() => changeCategory(post.categorieLink)} className="slide-categorie-link">{post.categorieLink}</Link>
                             </div>
-                            <h5 className="slide-title">
-                                <a href="#" className="slide-title-link">{post.postTitle}</a>
-                            </h5>   
+                            <h3 className="slide-title">
+                                <Link to={`/post/${post.post_Title}`} href="#" className="slide-title-link">{post.postTitle}</Link>
+                            </h3>   
                             <div className="slide-info">
                                 <div className="author-name">
                                     <Link to="/author" className="author-name-link">{post.authorName}</Link>

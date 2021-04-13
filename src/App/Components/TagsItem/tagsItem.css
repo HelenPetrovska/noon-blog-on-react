@@ -1,4 +1,4 @@
-.widget-tags-list {
+.tags-list {
     display: flex;
     flex-wrap: wrap;
 }
@@ -14,6 +14,7 @@
     color: #506172;
     font-weight: 700;
     transition: all 0.3s ease-in-out;
+    text-transform: capitalize;
 }
 .tag-item:hover .tag-link {
     color: #f67280;

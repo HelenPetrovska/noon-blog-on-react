@@ -29,7 +29,7 @@ const PostTop = ({
                     {inFavorites ? <span className="liked"></span> : <span className="noliked"></span>} 
                 </button>
             </div>
-            <h5 className="post-title">{postTitle}</h5>
+            <h4 className="post-title">{postTitle}</h4>
             <p className="post-description">{postDescription}</p>
             <div className="post-info">
                 <div className="author">
@@ -44,7 +44,6 @@ const PostTop = ({
                 </div>
             </div>
         </div>
-
     )
 }
 

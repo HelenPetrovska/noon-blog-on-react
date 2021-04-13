@@ -26,7 +26,7 @@ const PostCard = ({
                 <PostTop
                     postImg = {postImg}
                     categorieLink = {categorieLink}
-                    postTitle = {<Link to={`/${category}/post/${post_Title}`} className="post-title-link">{postTitle}</Link>                    }
+                    postTitle = {<Link to={`/post/${post_Title}`} className="post-title-link">{postTitle}</Link>}
                     changeCategory = {changeCategory}
                     inFavorites = {inFavorites}
                     addFavorite = {addFavorite}

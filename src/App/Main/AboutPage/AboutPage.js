@@ -4,12 +4,14 @@ import Sidebar from '../Sidebar/Sidebar'
 import './aboutPage.css'
 import AboutImage from './about.jpg'
 
-const AboutPage = () => {
+const AboutPage = ({
+    changeCategory
+}) => {
     return (
         <section className="page-section">
             <div className="container-fluid">
                 <div className="page-title">
-                    <h2>About Us</h2>
+                    <h5>About Us</h5>
                 </div>
                 <div className="blog-row">
                     <div className="blog-content">
@@ -30,10 +32,11 @@ const AboutPage = () => {
                                 </div>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada malesuada metus ut placerat. Cras a porttitor quam, eget ornare sapien. In sit amet vulputate metus. Nullam eget rutrum nisl. Sed tincidunt lorem sed maximus interdum. Interdum malesuada fames ante ipsum primis in faucibus. Aenean scelerisque efficitur mauris nec tincidunt. cursus leo ultricies magna faucibus id.</p>
                             </div>
-                            
                         </div>
                     </div>
-                    <Sidebar/>
+                    <Sidebar
+                        changeCategory={changeCategory}
+                    />
                 </div>
             </div>
         </section>

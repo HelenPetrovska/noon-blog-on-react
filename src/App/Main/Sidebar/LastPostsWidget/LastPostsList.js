@@ -1,7 +1,8 @@
 import React from 'react'
-
+import MiniPost from '../../../Components/MiniPost/MiniPost'
 import postCardItems from '../../PostCards/postCardItems'
-import LastPost from './LastPost'
+
+import './lastPostsList.css'
 
 const LastPostsList = () => {
     return (
@@ -11,14 +12,16 @@ const LastPostsList = () => {
                     id,
                     postImg,
                     postTitle,
+                    post_Title,
                     postDate,
                     nb
                 })=> {
                     return (
-                        <LastPost
+                        <MiniPost
                             key={id}
                             postImg={postImg}
                             postTitle={postTitle}
+                            post_Title={post_Title}
                             postDate={postDate}
                             nb={nb}
                         />

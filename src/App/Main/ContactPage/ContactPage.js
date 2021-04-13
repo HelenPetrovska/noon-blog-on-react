@@ -4,12 +4,14 @@ import Sidebar from '../Sidebar/Sidebar'
 import ContactImage from './contact-img.jpg'
 import ContactForm from './ContactForm/ContactForm'
 
-const ContactPage = () => {
+const ContactPage = ({
+    changeCategory
+}) => {
     return (
         <section className="page-section">
             <div className="container-fluid">
                 <div className="page-title">
-                    <h2>Contact Us</h2>
+                    <h5>Contact Us</h5>
                 </div>
                 <div className="blog-row">
                     <div className="blog-content">
@@ -26,7 +28,9 @@ const ContactPage = () => {
                             </div>
                         </div>    
                     </div>
-                    <Sidebar/>
+                    <Sidebar
+                        changeCategory={changeCategory}
+                    />
                 </div>
             </div>
         </section>

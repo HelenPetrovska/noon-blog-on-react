@@ -1,26 +1,26 @@
-.last-post {
+.mini-post {
     position: relative;
     display: grid;
     grid-template-columns: 90px 1fr;
     margin-bottom: 30px;
 }
-.last-post-image {
+.mini-post-image {
     width: 90px;
     height: 90px;
     overflow: hidden;
     border-radius: 20px;
 }
-.last-post-link {
+.mini-post-link {
     display: block;
 }
-.last-post-img {
+.mini-post-img {
     width: 90px;
     height: 90px;
     object-fit: cover;
     border-radius: 20px;
     transition: all 1s ease-in-out;
 }
-.last-post-img:hover {
+.mini-post-img:hover {
     transform: scale(1.1);
 }
 .nb {
@@ -39,20 +39,24 @@
     z-index: 2;
     cursor: pointer;
 }
-.last-post-content {
+.mini-post-content {
     margin-left: 15px;
 }
-.last-post-title {
+.mini-post-title {
     margin-bottom: 8px;
 }
-.last-title-link {
+.mini-title-link {
     color: #152035;
+    transition: all 0.3s ease-in-out;
 }
-.last-post-date {
+.mini-title-link:hover {
+    color: #f67280;
+}
+.mini-post-date {
     color: #506172;
     font-size: 13px;
 }
-.last-post-date::before {
+.mini-post-date::before {
     content: "\1F558";
     margin-right: 5px;
 }

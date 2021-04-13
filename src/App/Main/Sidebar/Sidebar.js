@@ -13,6 +13,7 @@ import AuthorWidget from './AuthorWidget/AuthorWidget'
 const Sidebar = ({
     changeCategory
 }) => {
+
     return (
         <div className="sidebar-row">
             <div className="widget author-widget">
@@ -34,7 +35,9 @@ const Sidebar = ({
             </div>
             <div className="widget tags-widget">
                 <h5 className="widget-title">Tags</h5>
-                <TagsList/>
+                <TagsList
+                    changeCategory = {changeCategory}
+                />
             </div>
         </div>
     )
