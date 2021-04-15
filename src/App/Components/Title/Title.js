@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import './title.css'
 
 const Title = ({
+    namePage,
     title
 }) => {
     return (
@@ -15,7 +16,7 @@ const Title = ({
                         <li className="breadcrumb-item"><Link to="/" className="breadcrumb-link">{title}</Link></li>
                     </ul>
                 </div>
-                <h3 className="title">Category: <span>{title}</span></h3>
+                <h3 className="title">{namePage}<span>{title}</span></h3>
                 <p className="title-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.Incidunt quae explicabo, ducimus necessitatibus eum aut enim modi saepe perspiciatis fugit
                 </p>
             </div>

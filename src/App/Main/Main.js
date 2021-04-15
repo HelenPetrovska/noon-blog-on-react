@@ -17,12 +17,11 @@ import FavoritesPage from './FavoritesPage/FavoritesPage'
 const Main = ({
     category,
     changeCategory,
-    addFavorite,
-    removeFavorite,
+    toggleFavorite,
     inFavorites,
     addToFavoritesPage,
-    inFavoritesPage,
-    removeFromFavoritesPage
+    removeFromFavoritesPage,
+    inFavoritesPage
 }) => {
 
     return (
@@ -36,12 +35,11 @@ const Main = ({
                     <PostCards
                         category={category}
                         changeCategory={changeCategory}
-                        addFavorite={addFavorite}
-                        removeFavorite={removeFavorite}
+                        toggleFavorite={toggleFavorite}
                         inFavorites={inFavorites}
                         addToFavoritesPage={addToFavoritesPage}
-                        inFavoritesPage={inFavoritesPage}
                         removeFromFavoritesPage={removeFromFavoritesPage}
+                        inFavoritesPage={inFavoritesPage}
                     />
                     <Index/>
                 </>
@@ -50,8 +48,11 @@ const Main = ({
                 <CategoryPage
                     category={category}
                     changeCategory={changeCategory}
-                    addFavorite={addFavorite}
+                    toggleFavorite={toggleFavorite}
                     inFavorites={inFavorites}
+                    addToFavoritesPage={addToFavoritesPage}
+                    removeFromFavoritesPage={removeFromFavoritesPage}
+                    inFavoritesPage={inFavoritesPage}
                 />
             )}/>
             <Route path="/about" render = {() => (
@@ -68,24 +69,32 @@ const Main = ({
                 <FavoritesPage
                     category={category}
                     changeCategory={changeCategory}
-                    addFavorite={addFavorite}
-                    removeFavorite={removeFavorite}
+                    toggleFavorite={toggleFavorite}
                     inFavorites={inFavorites}
                     addToFavoritesPage={addToFavoritesPage}
-                    inFavoritesPage={inFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
+                    inFavoritesPage={inFavoritesPage}
                 />
             )}/>
             <Route path="/author" render ={() => (
-                <AuthorPage/>
+                <AuthorPage
+                    toggleFavorite={toggleFavorite}
+                    inFavorites={inFavorites}
+                    addToFavoritesPage={addToFavoritesPage}
+                    removeFromFavoritesPage={removeFromFavoritesPage}
+                    inFavoritesPage={inFavoritesPage}
+                />
             )}/>
             <Route path={`/post/:postTitle`} render = {({match}) => (
                 <PostPage
                     match={match}
                     category={category}
                     changeCategory={changeCategory}
-                    addFavorite={addFavorite}
+                    toggleFavorite={toggleFavorite}
                     inFavorites={inFavorites}
+                    addToFavoritesPage={addToFavoritesPage}
+                    removeFromFavoritesPage={removeFromFavoritesPage}
+                    inFavoritesPage={inFavoritesPage}
                 />
             )}/>
             <Route path={`/tag/:postTag`} render = {({match}) => (
@@ -93,8 +102,11 @@ const Main = ({
                     match={match}
                     category={category}
                     changeCategory={changeCategory}
-                    addFavorite={addFavorite}
+                    toggleFavorite={toggleFavorite}
                     inFavorites={inFavorites}
+                    addToFavoritesPage={addToFavoritesPage}
+                    removeFromFavoritesPage={removeFromFavoritesPage}
+                    inFavoritesPage={inFavoritesPage}
                 />
             )}/>
 

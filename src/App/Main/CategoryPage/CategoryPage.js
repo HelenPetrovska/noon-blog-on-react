@@ -10,14 +10,18 @@ import './categoryPage.css'
 const CategoryPage = ({
     category,
     changeCategory,
-    addFavorite,
-    inFavorites
+    toggleFavorite,
+    inFavorites,
+    addToFavoritesPage,
+    removeFromFavoritesPage,
+    inFavoritesPage
 }) => {
 
     return (
         <section className="category-section">
             <div className="container-fluid">
                 <Title
+                    namePage={"Category: "}
                     title={category}
                 />
                 <div className="blog-row">
@@ -25,8 +29,11 @@ const CategoryPage = ({
                         <PostCardsFilter
                             category={category}
                             changeCategory={changeCategory}
-                            addFavorite={addFavorite}
+                            toggleFavorite={toggleFavorite}
                             inFavorites={inFavorites}
+                            addToFavoritesPage={addToFavoritesPage}
+                            removeFromFavoritesPage={removeFromFavoritesPage}
+                            inFavoritesPage={inFavoritesPage}
                         />
                     </div>
                     <Sidebar

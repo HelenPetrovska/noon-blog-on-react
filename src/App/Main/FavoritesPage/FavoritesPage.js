@@ -1,15 +1,19 @@
-import { keys } from 'lodash'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { keys } from 'lodash'
+
+import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
+import Title from '../../Components/Title/Title'
 import PostCard from '../PostCards/PostCard/PostCard'
 import postCardItems, { getPostCardItemsObject } from '../PostCards/postCardItems'
-import PostCards from '../PostCards/PostCards'
+import Sidebar from '../Sidebar/Sidebar'
+
+import './favoritesPage.css'
 
 
 const FavoritesPage = ({
     category,
     changeCategory,
-    addFavorite,
+    toggleFavorite,
     removeFavorite,
     inFavorites,
     addToFavoritesPage,
@@ -19,48 +23,47 @@ const FavoritesPage = ({
 
 }) => {
     return (
-        <section className="post-cards">
+        <section className="favorite-section">
             <div className="container-fluid">
-                <div className="post-cards-row">
-                    {
-                        keys(inFavoritesPage).map(postId => (
-                            <div className="post-top">
-                                <div className="post-image">
-                                    <a href="#" className="post-image-link">
-                                        <img src={postCardItemsObject[postId].postImg} alt="post-img" className="post-img"/>
-                                    </a>
-                                </div>
-                                <div className="categorie-favorit">
-                                    <Link to={`/category/${postCardItemsObject[postId].categorieLink}`} onClick={() => changeCategory(postCardItemsObject[postId].categorieLink)} className="categorie-link">{postCardItemsObject[postId].categorieLink}</Link>
-                                    <button className="favorite-btn" title={inFavorites[postId] ? 'Remove from Favorites' : 'Add to Favorites'} onClick={() => inFavorites[postId] ? (removeFromFavoritesPage(postId),removeFavorite(postId)) : (addToFavoritesPage(postId),addFavorite(postId))}>
-                                        {inFavorites[postId] ? <span className="liked"></span> : <span className="noliked"></span>} 
-                                    </button>
-                                </div>
-                            </div>
-                        
-                            // <PostCard
-                            //     key={postId}
-                            //     id={[postId].id}
-                            //     postImg={postCardItemsObject[postId].postImg}
-                            //     categorieLink={postCardItemsObject[postId].categorieLink}
-                            //     postTitle={postCardItemsObject[postId].postTitle}
-                            //     post_Title={postCardItemsObject[postId].post_Title}
-                            //     postDescription={postCardItemsObject[postId].postDescription}
-                            //     authorImg={postCardItemsObject[postId].authorImg}
-                            //     authorName={postCardItemsObject[postId].authorName}
-                            //     postDate={postCardItemsObject[postId].postDate}
-                            //     category={category}
-                            //     changeCategory={changeCategory}
-                            //     inFavorites={inFavorites}
-                            //     addFavorite={addFavorite}
-                            //     addToFavoritesPage={addToFavoritesPage}
-                            //     inFavoritesPage={inFavoritesPage}
-                            //     removeProductFromCart={removeProductFromCart}
-                            // />
-                        ))
-                    }
+                <Title
+                    namePage={""}
+                    title={"Favorites"}
+                />
+                <div className="blog-row">
+                    <div className="blog-content">
+                        <div className="post-cards-row">
+                            {
+                                keys(inFavoritesPage).map(postId => (
+                                    <PostCard
+                                        key={postCardItemsObject[postId].id}
+                                        id={postCardItemsObject[postId].id}
+                                        postImg={postCardItemsObject[postId].postImg}
+                                        categorieLink={postCardItemsObject[postId].categorieLink}
+                                        postTitle={postCardItemsObject[postId].postTitle}
+                                        post_Title={postCardItemsObject[postId].post_Title}
+                                        postDescription={postCardItemsObject[postId].postDescription}
+                                        authorImg={postCardItemsObject[postId].authorImg}
+                                        authorName={postCardItemsObject[postId].authorName}
+                                        postDate={postCardItemsObject[postId].postDate}
+                                        category={category}
+                                        changeCategory={changeCategory}
+                                        inFavorites={inFavorites}
+                                        toggleFavorite={toggleFavorite}
+                                        removeFavorite={removeFavorite}
+                                        addToFavoritesPage={addToFavoritesPage}
+                                        inFavoritesPage={inFavoritesPage}
+                                        removeFromFavoritesPage ={removeFromFavoritesPage}
+                                    />
+                                ))
+                            }
+                        </div>
+                    </div>
+                    <Sidebar
+                        changeCategory={changeCategory}
+                    />
                 </div>
             </div>
+            <Index/>
         </section>
     )
 }

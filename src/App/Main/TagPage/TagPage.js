@@ -10,14 +10,18 @@ import './tagPage.css'
 const TagPage = ({
     category,
     changeCategory,
-    addFavorite,
-    inFavorites
+    toggleFavorite,
+    inFavorites,
+    addToFavoritesPage,
+    removeFromFavoritesPage,
+    inFavoritesPage,
 }) => {
 
     return (
         <section className="tag-section">
             <div className="container-fluid">
                 <Title
+                    namePage={"Tag: "}
                     title={category}
                 />
                 <div className="blog-row">
@@ -38,6 +42,7 @@ const TagPage = ({
                                     return (
                                         <PostCard
                                             key={id}
+                                            id={id}
                                             postImg={postImg}
                                             categorieLink={categorieLink}
                                             postTitle={postTitle}
@@ -48,8 +53,11 @@ const TagPage = ({
                                             postDate={postDate}
                                             category={category}
                                             changeCategory={changeCategory}
-                                            addFavorite={addFavorite}
+                                            toggleFavorite={toggleFavorite}
                                             inFavorites={inFavorites}
+                                            addToFavoritesPage={addToFavoritesPage}
+                                            removeFromFavoritesPage={removeFromFavoritesPage}
+                                            inFavoritesPage={inFavoritesPage}
                                         />
                                     )
                                 }))

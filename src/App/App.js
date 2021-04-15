@@ -32,32 +32,24 @@ class App extends Component {
         })
     }
 
-    addFavorite = ((postId) => {
+    toggleFavorite = ((postId) => {
         this.setState((prevState) => ({
             inFavorites: {
                 ...prevState.inFavorites,
-                [postId]:true
+                [postId]: !prevState.inFavorites[postId]
             }
         }))
     })
 
-    removeFavorite = ((postId) => {
-        this.setState((prevState) => ({
-            inFavorites: {
-                ...prevState.inFavorites,
-                [postId]:false
-            }
-        }))
-    })
-
-    addToFavoritesPage = (id) => {
+    addToFavoritesPage = (postId) => {
         this.setState((prevState) => ({
             inFavoritesPage: {
                 ...prevState.inFavoritesPage,
-                [id]:[id]
+                [postId]:[postId]
             }
         }))
     }
+
     removeFromFavoritesPage = (postId) => {
         this.setState((prevState) => ({
             inFavoritesPage:omit(prevState.inFavoritesPage,[postId])
@@ -76,8 +68,7 @@ class App extends Component {
                 <Main
                     category={this.state.category}
                     changeCategory={this.changeCategory}
-                    addFavorite={this.addFavorite}
-                    removeFavorite={this.removeFavorite}
+                    toggleFavorite={this.toggleFavorite}
                     inFavorites={this.state.inFavorites}
                     addToFavoritesPage={this.addToFavoritesPage}
                     removeFromFavoritesPage = {this.removeFromFavoritesPage}

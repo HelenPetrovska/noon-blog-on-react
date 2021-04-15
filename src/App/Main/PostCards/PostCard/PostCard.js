@@ -16,12 +16,11 @@ const PostCard = ({
     postDate,
     category,
     changeCategory,
+    toggleFavorite,    
     inFavorites,
-    addFavorite,
-    removeFavorite,
     addToFavoritesPage,
-    inFavoritesPage,
-    removeFromFavoritesPage
+    removeFromFavoritesPage,
+    inFavoritesPage
 }) => {
 
     return (
@@ -39,12 +38,11 @@ const PostCard = ({
                     authorImg = {authorImg}
                     authorName = {authorName}
                     postDate = {postDate}
+                    toggleFavorite={toggleFavorite}
                     inFavorites = {inFavorites}
-                    addFavorite = {addFavorite}
-                    removeFavorite = {removeFavorite}
                     addToFavoritesPage={addToFavoritesPage}
-                    inFavoritesPage={inFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
+                    inFavoritesPage={inFavoritesPage}
                 />
             </div>
         </div>

@@ -13,8 +13,11 @@ import './postPage.css'
 const PostPage = ({
     category,
     changeCategory,
-    addFavorite,
+    toggleFavorite,
     inFavorites,
+    addToFavoritesPage,
+    removeFromFavoritesPage,
+    inFavoritesPage,
     match,
     postCardItemsObject = getPostCardItemsObject(postCardItems),
 }) => {
@@ -34,12 +37,16 @@ const PostPage = ({
                                 categorieLink = {postCardItemsObject[id].categorieLink}
                                 postTitle = {postCardItemsObject[id].postTitle}
                                 changeCategory = {changeCategory}
-                                inFavorites = {inFavorites}
-                                addFavorite = {addFavorite}
                                 postDescription = {postCardItemsObject[id].postDescription}
                                 authorImg = {postCardItemsObject[id].authorImg}
                                 authorName = {postCardItemsObject[id].authorName}
                                 postDate = {postCardItemsObject[id].postDate}
+                                toggleFavorite={toggleFavorite}
+                                inFavorites={inFavorites}
+                                addToFavoritesPage={addToFavoritesPage}
+                                removeFromFavoritesPage={removeFromFavoritesPage}
+                                inFavoritesPage={inFavoritesPage}
+            
                             />
                             <div
                                 dangerouslySetInnerHTML={{
@@ -60,7 +67,7 @@ const PostPage = ({
                                     postTitle={postCardItemsObject[id-1] === undefined ? null : postCardItemsObject[id-1].postTitle}
                                     post_Title={postCardItemsObject[id-1] === undefined ? null : postCardItemsObject[id-1].post_Title}
                                     postImg={postCardItemsObject[id-1] === undefined ? null : postCardItemsObject[id-1].postImg}
-                                    prevNextLink={<span className="prev-post"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Preview Post</span>}
+                                    prevNextLink={<span className="prev-post"><i className="fa fa-long-arrow-left" aria-hidden="true"></i>Preview Post</span>}
                                 />
                             </div>
                             <div className={postCardItemsObject[id+1] === undefined ? "invisible" : "next-link"}>
@@ -68,7 +75,7 @@ const PostPage = ({
                                     postTitle={postCardItemsObject[id+1] === undefined ? null : postCardItemsObject[id+1].postTitle}
                                     post_Title={postCardItemsObject[id+1] === undefined ? null : postCardItemsObject[id+1].post_Title}
                                     postImg={postCardItemsObject[id+1] === undefined ? null : postCardItemsObject[id+1].postImg}
-                                    prevNextLink={<span className="next-post">Next Post<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>}
+                                    prevNextLink={<span className="next-post">Next Post<i className="fa fa-long-arrow-right" aria-hidden="true"></i></span>}
                                 />
                            </div>
                        </div>

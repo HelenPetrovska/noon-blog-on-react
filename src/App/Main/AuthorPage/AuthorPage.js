@@ -6,12 +6,25 @@ import AuthorWidget from '../Sidebar/AuthorWidget/AuthorWidget'
 
 import './authorPage.css'
 
-const AuthorPage = () => {
+const AuthorPage = ({
+    toggleFavorite,
+    inFavorites,
+    addToFavoritesPage,
+    removeFromFavoritesPage,
+    inFavoritesPage
+
+}) => {
     return (
         <section className="page-section author-section">
             <div className="container-fluid">
                 <AuthorWidget/>
-                <PostCards/>
+                <PostCards
+                    toggleFavorite={toggleFavorite}
+                    inFavorites={inFavorites}
+                    addToFavoritesPage={addToFavoritesPage}
+                    removeFromFavoritesPage={removeFromFavoritesPage}
+                    inFavoritesPage={inFavoritesPage}
+                />
             </div>
             <Index/>
         </section>

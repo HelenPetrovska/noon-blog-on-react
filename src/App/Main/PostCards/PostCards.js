@@ -9,12 +9,11 @@ import "./postCards.css"
 const PostCards = ({
     category,
     changeCategory,
-    addFavorite,
-    removeFavorite,
+    toggleFavorite,
     inFavorites,
     addToFavoritesPage,
-    inFavoritesPage,
-    removeFromFavoritesPage
+    removeFromFavoritesPage,
+    inFavoritesPage
 }) => {
     return (
         <section className="post-cards">
@@ -46,12 +45,11 @@ const PostCards = ({
                                     postDate={postDate}
                                     category={category}
                                     changeCategory={changeCategory}
-                                    addFavorite={addFavorite}
-                                    removeFavorite={removeFavorite}
+                                    toggleFavorite={toggleFavorite}
                                     inFavorites={inFavorites}
                                     addToFavoritesPage={addToFavoritesPage}
-                                    inFavoritesPage={inFavoritesPage}
                                     removeFromFavoritesPage={removeFromFavoritesPage}
+                                    inFavoritesPage={inFavoritesPage}
                                 />
                             )
                         })

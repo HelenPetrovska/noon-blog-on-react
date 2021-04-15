@@ -14,12 +14,11 @@ const PostTop = ({
     authorImg,
     authorName,
     postDate,
-    inFavorites = false,
-    addFavorite,
-    removeFavorite,
+    toggleFavorite,
+    inFavorites,
     addToFavoritesPage,
-    inFavoritesPage,
-    removeFromFavoritesPage
+    removeFromFavoritesPage,
+    inFavoritesPage
 }) => {
     return (
         <div className="post-top">
@@ -30,7 +29,7 @@ const PostTop = ({
             </div>
             <div className="categorie-favorit">
                 <Link to={`/category/${categorieLink}`} onClick={() => changeCategory(categorieLink)} className="categorie-link">{categorieLink}</Link>
-                <button className="favorite-btn" title={inFavorites[id] ? 'Remove from Favorites' : 'Add to Favorites'} onClick={() => inFavorites[id] ? (removeFromFavoritesPage(id), removeFavorite(id)) : (addToFavoritesPage(id), addFavorite(id))}>
+                <button className="favorite-btn" title={inFavorites[id] ? 'Remove from Favorites' : 'Add to Favorites'} onClick={() => inFavorites[id] ? (removeFromFavoritesPage(id), toggleFavorite(id)) : (addToFavoritesPage(id), toggleFavorite(id))}>
                     {inFavorites[id] ? <span className="liked"></span> : <span className="noliked"></span>} 
                 </button>
             </div>
