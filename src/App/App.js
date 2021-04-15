@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { omit } from 'lodash'
 
 import "../common/style/reset.css"
 import "../common/style/base.css"
@@ -14,7 +15,8 @@ class App extends Component {
 
     state = {
         category: 'travel',
-        inFavorites: false,
+        inFavorites: {},
+        inFavoritesPage:{},
         modal:false
     }
 
@@ -30,12 +32,36 @@ class App extends Component {
         })
     }
 
-    addFavorite = () => {
-        this.setState((prevState) => {
-            return {
-                inFavorites: !prevState.inFavorites
+    addFavorite = ((postId) => {
+        this.setState((prevState) => ({
+            inFavorites: {
+                ...prevState.inFavorites,
+                [postId]:true
             }
-        })
+        }))
+    })
+
+    removeFavorite = ((postId) => {
+        this.setState((prevState) => ({
+            inFavorites: {
+                ...prevState.inFavorites,
+                [postId]:false
+            }
+        }))
+    })
+
+    addToFavoritesPage = (id) => {
+        this.setState((prevState) => ({
+            inFavoritesPage: {
+                ...prevState.inFavoritesPage,
+                [id]:[id]
+            }
+        }))
+    }
+    removeFromFavoritesPage = (postId) => {
+        this.setState((prevState) => ({
+            inFavoritesPage:omit(prevState.inFavoritesPage,[postId])
+        }))
     }
 
     render () {
@@ -51,7 +77,11 @@ class App extends Component {
                     category={this.state.category}
                     changeCategory={this.changeCategory}
                     addFavorite={this.addFavorite}
+                    removeFavorite={this.removeFavorite}
                     inFavorites={this.state.inFavorites}
+                    addToFavoritesPage={this.addToFavoritesPage}
+                    removeFromFavoritesPage = {this.removeFromFavoritesPage}
+                    inFavoritesPage={this.state.inFavoritesPage}
                 />
                 <Subscribe/>
                 <Footer/>

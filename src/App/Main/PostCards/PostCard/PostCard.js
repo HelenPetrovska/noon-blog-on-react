@@ -17,23 +17,34 @@ const PostCard = ({
     category,
     changeCategory,
     inFavorites,
-    addFavorite
+    addFavorite,
+    removeFavorite,
+    addToFavoritesPage,
+    inFavoritesPage,
+    removeFromFavoritesPage
 }) => {
 
     return (
         <div className="post-card">
             <div className="post-content">
                 <PostTop
+                    key={id}
+                    id={id}
                     postImg = {postImg}
                     categorieLink = {categorieLink}
                     postTitle = {<Link to={`/post/${post_Title}`} className="post-title-link">{postTitle}</Link>}
+                    post_Title = {post_Title}
                     changeCategory = {changeCategory}
-                    inFavorites = {inFavorites}
-                    addFavorite = {addFavorite}
                     postDescription = {postDescription}
                     authorImg = {authorImg}
                     authorName = {authorName}
                     postDate = {postDate}
+                    inFavorites = {inFavorites}
+                    addFavorite = {addFavorite}
+                    removeFavorite = {removeFavorite}
+                    addToFavoritesPage={addToFavoritesPage}
+                    inFavoritesPage={inFavoritesPage}
+                    removeFromFavoritesPage={removeFromFavoritesPage}
                 />
             </div>
         </div>

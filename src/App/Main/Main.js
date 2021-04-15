@@ -18,7 +18,11 @@ const Main = ({
     category,
     changeCategory,
     addFavorite,
-    inFavorites
+    removeFavorite,
+    inFavorites,
+    addToFavoritesPage,
+    inFavoritesPage,
+    removeFromFavoritesPage
 }) => {
 
     return (
@@ -33,7 +37,11 @@ const Main = ({
                         category={category}
                         changeCategory={changeCategory}
                         addFavorite={addFavorite}
+                        removeFavorite={removeFavorite}
                         inFavorites={inFavorites}
+                        addToFavoritesPage={addToFavoritesPage}
+                        inFavoritesPage={inFavoritesPage}
+                        removeFromFavoritesPage={removeFromFavoritesPage}
                     />
                     <Index/>
                 </>
@@ -58,7 +66,14 @@ const Main = ({
             )}/>
             <Route path="/favorites" render = {() => (
                 <FavoritesPage
+                    category={category}
                     changeCategory={changeCategory}
+                    addFavorite={addFavorite}
+                    removeFavorite={removeFavorite}
+                    inFavorites={inFavorites}
+                    addToFavoritesPage={addToFavoritesPage}
+                    inFavoritesPage={inFavoritesPage}
+                    removeFromFavoritesPage={removeFromFavoritesPage}
                 />
             )}/>
             <Route path="/author" render ={() => (

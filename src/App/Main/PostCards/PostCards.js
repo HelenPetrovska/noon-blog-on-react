@@ -10,7 +10,11 @@ const PostCards = ({
     category,
     changeCategory,
     addFavorite,
-    inFavorites
+    removeFavorite,
+    inFavorites,
+    addToFavoritesPage,
+    inFavoritesPage,
+    removeFromFavoritesPage
 }) => {
     return (
         <section className="post-cards">
@@ -43,7 +47,11 @@ const PostCards = ({
                                     category={category}
                                     changeCategory={changeCategory}
                                     addFavorite={addFavorite}
+                                    removeFavorite={removeFavorite}
                                     inFavorites={inFavorites}
+                                    addToFavoritesPage={addToFavoritesPage}
+                                    inFavoritesPage={inFavoritesPage}
+                                    removeFromFavoritesPage={removeFromFavoritesPage}
                                 />
                             )
                         })
