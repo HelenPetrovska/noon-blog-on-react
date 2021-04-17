@@ -46,7 +46,6 @@ const PostPage = ({
                                 addToFavoritesPage={addToFavoritesPage}
                                 removeFromFavoritesPage={removeFromFavoritesPage}
                                 inFavoritesPage={inFavoritesPage}
-            
                             />
                             <div
                                 dangerouslySetInnerHTML={{

@@ -1,3 +1,4 @@
+import { keys } from 'lodash'
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
@@ -7,7 +8,7 @@ class Menu extends Component {
 
     state = {
         mobileMenu: false,
-        submenu: false
+        submenu: false,
     }
 
     toggleMobileMenu = () => {
@@ -38,6 +39,7 @@ class Menu extends Component {
         const {
             category,
             changeCategory,
+            inFavoritesPage
         } = this.props
 
         return (
@@ -63,8 +65,12 @@ class Menu extends Component {
                         </li>
                         <li className="menu-item"><Link to="/about" onClick={() => this.toggleMobileMenu()} className="menu-link">About</Link></li>
                         <li className="menu-item"><Link to="/contact" onClick={() => this.toggleMobileMenu()} className="menu-link">Contact</Link></li>
-                        <li className="menu-item"><Link to="/favorites" onClick={() => this.toggleMobileMenu()} className="menu-link">Favorites</Link></li>
-
+                        <li className="menu-item"><Link to="/favorites" onClick={() => this.toggleMobileMenu()} className="menu-link favorites-link">Favorites<span className={(keys(inFavoritesPage).length) === 0 ? "noliked heart-menu" : "liked heart-menu"}></span>
+                        <span className="countFavorite">
+                            {
+                                keys(inFavoritesPage).length
+                            }
+                        </span></Link></li>
                     </ul>
                 </nav>
                 <div className="nav-mobile-menu" onClick={() => (this.toggleMobileMenu(), this.hideSubmenu())}>

@@ -10,7 +10,8 @@ const Header = ({
     category,
     changeCategory,
     toggleModal,
-    modal
+    modal,
+    inFavoritesPage
 }) => {
     return (
         <header className="header">
@@ -21,6 +22,7 @@ const Header = ({
                     <Menu
                         category={category}
                         changeCategory={changeCategory}
+                        inFavoritesPage={inFavoritesPage}
                     />
                     <HeaderLinks
                         toggleModal={toggleModal}

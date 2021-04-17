@@ -13,7 +13,7 @@ const TagsItem = ({
         <div className="tags-list">
             {
                 tags.map(tag => (
-                        <div className="tag-item">
+                        <div className="tag-item" key={`${tag}`}>
                             <Link to={`/tag/${tag}`} onClick = {() => changeCategory(tag)} className="tag-link">{tag}</Link>
                         </div>
                     )

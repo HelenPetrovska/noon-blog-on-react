@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import './postTop.css'
+
 
 const PostTop = ({
     id,
@@ -18,7 +19,7 @@ const PostTop = ({
     inFavorites,
     addToFavoritesPage,
     removeFromFavoritesPage,
-    inFavoritesPage
+    inFavoritesPage,
 }) => {
     return (
         <div className="post-top">

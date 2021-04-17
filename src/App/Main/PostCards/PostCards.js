@@ -13,14 +13,17 @@ const PostCards = ({
     inFavorites,
     addToFavoritesPage,
     removeFromFavoritesPage,
-    inFavoritesPage
+    inFavoritesPage,
+    changeSlice,
+    sliceTo,
+    sliceFrom
 }) => {
     return (
         <section className="post-cards">
             <div className="container-fluid">
                 <div className="post-cards-row">
                     {
-                        postCardsItems.map(({
+                        postCardsItems.slice(`${sliceFrom}`,`${sliceTo}`).map(({
                             id,
                             postImg,
                             categorieLink,
@@ -50,12 +53,17 @@ const PostCards = ({
                                     addToFavoritesPage={addToFavoritesPage}
                                     removeFromFavoritesPage={removeFromFavoritesPage}
                                     inFavoritesPage={inFavoritesPage}
+                                    changeSlice={changeSlice}
+                                    sliceTo={sliceTo}
+                                    sliceFrom={sliceFrom}           
                                 />
                             )
                         })
                     }
                 </div>
-                <PostPagination/>
+                <PostPagination
+                    changeSlice={changeSlice}
+            />
             </div>
         </section>
     )

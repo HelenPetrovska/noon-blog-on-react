@@ -47,12 +47,14 @@
     height: 23px;
     display: block;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .liked {
     background-image: url(./liked.png);
 } 
 .noliked {
     background-image: url(./noliked.png);
+
 }
 .post-title {
     margin-bottom: 10px;

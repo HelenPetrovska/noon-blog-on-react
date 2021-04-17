@@ -15,13 +15,17 @@
     text-align: center;
     margin-left: 7px;
     margin-right: 7px;
-    line-height: 35px;
+    line-height: 30px;
     cursor: pointer;
 }
 .pagination-link {
     color: #f67280;
     font-weight: 700;
     transition: all 0.5s ease-in-out;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 .pagination-item:hover {
     background-color: #f67280;

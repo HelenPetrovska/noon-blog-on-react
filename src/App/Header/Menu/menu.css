@@ -57,6 +57,17 @@
 .categories-item-desktop {
     display: none !important;
 }
+.favorites-link {
+    display: flex;
+    align-items: center;
+}
+.favorites-link .liked, .favorites-link .noliked {
+    width: 18px;
+    height: 18px;
+}
+.heart-menu {
+    margin: 0 5px;
+}
 /* laptop md*/
 @media(min-width:992px) {
     .menu {

@@ -17,11 +17,20 @@ class App extends Component {
         category: 'travel',
         inFavorites: {},
         inFavoritesPage:{},
-        modal:false
+        modal:false,
+        sliceFrom: 0,
+        sliceTo: 6
     }
 
     changeCategory = ((name) => {
         this.setState({category: name})
+    })
+
+    changeSlice = ((from, to) => {
+        this.setState({
+            sliceFrom:from,
+            sliceTo:to
+        })
     })
 
     toggleModal = () => {
@@ -56,6 +65,7 @@ class App extends Component {
         }))
     }
 
+
     render () {
         return (
             <>
@@ -64,6 +74,7 @@ class App extends Component {
                     changeCategory={this.changeCategory}
                     toggleModal={this.toggleModal}
                     modal={this.state.modal}
+                    inFavoritesPage={this.state.inFavoritesPage}
                 />
                 <Main
                     category={this.state.category}
@@ -73,6 +84,9 @@ class App extends Component {
                     addToFavoritesPage={this.addToFavoritesPage}
                     removeFromFavoritesPage = {this.removeFromFavoritesPage}
                     inFavoritesPage={this.state.inFavoritesPage}
+                    changeSlice={this.changeSlice}
+                    sliceTo={this.state.sliceTo}
+                    sliceFrom={this.state.sliceFrom}
                 />
                 <Subscribe/>
                 <Footer/>
