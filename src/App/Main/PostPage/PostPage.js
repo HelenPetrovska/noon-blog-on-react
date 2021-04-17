@@ -33,6 +33,7 @@ const PostPage = ({
                     <div className="blog-content">
                         <div className="page-content">
                             <PostTop
+                                id = {postCardItemsObject[id].id}
                                 postImg = {postCardItemsObject[id].postImgBig}
                                 categorieLink = {postCardItemsObject[id].categorieLink}
                                 postTitle = {postCardItemsObject[id].postTitle}
