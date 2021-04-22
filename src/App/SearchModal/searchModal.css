@@ -11,9 +11,9 @@
 .close-btn {
     height: 40px;
     width: 40px;
-    position: absolute;
-    top: 30px;
-    right: 30px;
+}
+.modal-row {
+    text-align: right;
 }
 .modal-row .form {
     border-radius: 20px;

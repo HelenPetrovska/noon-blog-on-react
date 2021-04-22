@@ -41,14 +41,14 @@ class App extends Component {
         })
     }
 
-    toggleFavorite = ((postId) => {
-        this.setState((prevState) => ({
+    toggleFavorite = (postId) => {
+        this.setState(prevState => ({
             inFavorites: {
                 ...prevState.inFavorites,
                 [postId]: !prevState.inFavorites[postId]
             }
         }))
-    })
+    }
 
     addToFavoritesPage = (postId) => {
         this.setState((prevState) => ({

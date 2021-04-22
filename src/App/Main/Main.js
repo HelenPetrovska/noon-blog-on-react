@@ -13,6 +13,8 @@ import Index from '../Components/ScrollUpBtn/ScrollUpBtn'
 
 import './main.css'
 import FavoritesPage from './FavoritesPage/FavoritesPage'
+import TestPage from './TestPage'
+import { Link } from 'react-router-dom'
 
 const Main = ({
     category,
@@ -35,6 +37,7 @@ const Main = ({
                         category={category}
                         changeCategory={changeCategory}
                     />
+                    <button><Link to="/test">click</Link></button>
                     <PostCards
                         category={category}
                         changeCategory={changeCategory}
@@ -50,6 +53,12 @@ const Main = ({
                     <Index/>
                 </>
             )}/>
+            <Route path="/test" render = {() => (
+                <TestPage
+                    changeCategory={changeCategory}
+                />
+            )}/>
+
             <Route path="/category/" render = {() => (
                 <CategoryPage
                     category={category}
@@ -89,6 +98,9 @@ const Main = ({
                     addToFavoritesPage={addToFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
                     inFavoritesPage={inFavoritesPage}
+                    changeSlice={changeSlice}
+                    sliceTo={sliceTo}
+                    sliceFrom={sliceFrom}
                 />
             )}/>
             <Route path={`/post/:postTitle`} render = {({match}) => (

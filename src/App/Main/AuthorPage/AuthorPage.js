@@ -11,7 +11,11 @@ const AuthorPage = ({
     inFavorites,
     addToFavoritesPage,
     removeFromFavoritesPage,
-    inFavoritesPage
+    inFavoritesPage,
+    changeSlice,
+    sliceTo,
+    sliceFrom
+
 
 }) => {
     return (
@@ -24,6 +28,9 @@ const AuthorPage = ({
                     addToFavoritesPage={addToFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
                     inFavoritesPage={inFavoritesPage}
+                    changeSlice={changeSlice}
+                    sliceTo={sliceTo}
+                    sliceFrom={sliceFrom}
                 />
             </div>
             <Index/>
