@@ -3,6 +3,8 @@
     padding-right: 5px;
 }
 .social .social-link {
+    color: #ffffff;
+    font-size: 17px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -14,11 +16,6 @@
 }
 .social .social-link:hover {
     background-color: #F9F9FF;
-}
-.social .fa {
-    color: #ffffff;
-}
-.social .social-link:hover .fa {
     color: #506172;
 }
 .facebook-official-link {

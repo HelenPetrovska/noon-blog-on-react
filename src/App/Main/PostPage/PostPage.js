@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Comments from '../../Components/Comments/Comments'
 import MiniPost from '../../Components/MiniPost/MiniPost'
 import PostTop from '../../Components/PostTop/PostTop'
 import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
@@ -7,6 +8,8 @@ import Social from '../../Components/Social/Social'
 import TagsItem from '../../Components/TagsItem/TagsItem'
 import postCardItems, { getPostCardItemsObject } from '../PostCards/postCardItems'
 import Sidebar from '../Sidebar/Sidebar'
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 
 import './postPage.css'
 
@@ -22,7 +25,7 @@ const PostPage = ({
     postCardItemsObject = getPostCardItemsObject(postCardItems),
 }) => {
 
-    const linkTitle = postCardItems.filter(post => post.post_Title === match.params.postTitle)
+    const linkTitle = postCardItems.filter(post => post.post_Title === match.params.post_Title)
 
     const id = linkTitle[0].id
 
@@ -67,7 +70,7 @@ const PostPage = ({
                                     postTitle={postCardItemsObject[id-1] === undefined ? null : postCardItemsObject[id-1].postTitle}
                                     post_Title={postCardItemsObject[id-1] === undefined ? null : postCardItemsObject[id-1].post_Title}
                                     postImg={postCardItemsObject[id-1] === undefined ? null : postCardItemsObject[id-1].postImg}
-                                    prevNextLink={<span className="prev-post"><i className="fa fa-long-arrow-left" aria-hidden="true"></i>Preview Post</span>}
+                                    prevNextLink={<span className="prev-post"><ArrowLeftIcon/>Preview Post</span>}
                                 />
                             </div>
                             <div className={postCardItemsObject[id+1] === undefined ? "invisible" : "next-link"}>
@@ -75,9 +78,12 @@ const PostPage = ({
                                     postTitle={postCardItemsObject[id+1] === undefined ? null : postCardItemsObject[id+1].postTitle}
                                     post_Title={postCardItemsObject[id+1] === undefined ? null : postCardItemsObject[id+1].post_Title}
                                     postImg={postCardItemsObject[id+1] === undefined ? null : postCardItemsObject[id+1].postImg}
-                                    prevNextLink={<span className="next-post">Next Post<i className="fa fa-long-arrow-right" aria-hidden="true"></i></span>}
+                                    prevNextLink={<span className="next-post">Next Post<ArrowRightIcon/></span>}
                                 />
                            </div>
+                       </div>
+                       <div className="post-comments">
+                            <Comments/>
                        </div>
                     </div>
                     <Sidebar

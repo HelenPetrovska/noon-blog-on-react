@@ -15,14 +15,14 @@
 .quote-icon {
     width: 30px;
     height: 30px;
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 55px;
     border-radius: 50%;
     background-color: #f67280;
     text-align: center;
-    padding-top: 5px;
 }
-.fa-quote-right {
-    color: #ffffff;
-}
+
 .quote p {
     color: #152035;
     font-weight: 900;

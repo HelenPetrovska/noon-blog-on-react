@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchIcon from '@material-ui/icons/Search';
 
 import "./headerSearch.css"
 
@@ -8,7 +9,7 @@ const HeaderSearch = ({
 }) => {
     return (
         <div className="header-search">
-            <button onClick={() => toggleModal()} className="btn header-search-btn"><i className="fa fa-search" aria-hidden="true"></i></button>
+            <button onClick={() => toggleModal()} className="btn header-search-btn"><SearchIcon style={{fontSize:20}}/></button>
         </div>
 
     )

@@ -1,8 +1,11 @@
 .header-search-btn {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .header-search-btn:hover, .categorie-link:hover {
     background-color: #506172;

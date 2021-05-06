@@ -17,6 +17,9 @@
 .post-img:hover {
     transform: scale(1.1);
 }
+.post-img-post-page {
+    display: none;
+}
 .categorie-favorit {
     display: flex;
     justify-content: space-between;

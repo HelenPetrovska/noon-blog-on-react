@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { Link } from 'react-router-dom'
+import {connect} from 'react-redux'
+
 
 import './postTop.css'
 
@@ -14,22 +16,26 @@ const PostTop = ({
     authorImg,
     authorName,
     postDate,
+    addToFavoritesPage,
+    removeFromFavoritesPage,
     toggleFavorite,
     inFavorites,
-    addToFavoritesPage,
-    removeFromFavoritesPage
+    isLiked
+
 }) => {
+
     return (
         <div className="post-top">
             <div className="post-image">
                 <Link to={`/post/${post_Title}`} className="post-image-link">
                     <img src={postImg} alt="post-img" className="post-img"/>
                 </Link>
+                <img src={postImg} alt="post-img" className="post-img-post-page"/>
             </div>
             <div className="categorie-favorit">
                 <Link to={`/category/${categorieLink}`} onClick={() => changeCategory(categorieLink)} className="categorie-link">{categorieLink}</Link>
-                <button className="favorite-btn" title={inFavorites ? 'Remove from Favorites' : 'Add to Favorites'} onClick={() => inFavorites ? (removeFromFavoritesPage(id), toggleFavorite(id)) : (addToFavoritesPage(id), toggleFavorite(id))}>
-                    {inFavorites ? <span className="liked"></span> : <span className="noliked"></span>} 
+                <button className="favorite-btn" title={inFavorites ? 'Remove from Favorites' : 'Add to Favorites'} onClick={() => (inFavorites ? (removeFromFavoritesPage(id), toggleFavorite(id)) : (addToFavoritesPage(id), toggleFavorite(id)))}>
+                    {isLiked ? <span className="liked"></span> : <span className="noliked"></span>} 
                 </button>
             </div>
             <h4 className="post-title">{postTitle}</h4>
@@ -50,4 +56,11 @@ const PostTop = ({
     )
 }
 
-export default PostTop
+const mapState = (state,{id}) => ({
+    isLiked:state[id]
+})
+
+export default connect(
+    mapState
+
+)(PostTop)

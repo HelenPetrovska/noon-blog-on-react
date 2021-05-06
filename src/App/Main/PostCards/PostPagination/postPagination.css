@@ -33,3 +33,6 @@
 .pagination-item:hover .pagination-link {
     color: #ffffff;
 }
+.pagination-link .MuiSvgIcon-root {
+    margin-top: 6px;
+}

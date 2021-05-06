@@ -11,6 +11,7 @@
 .social-link {
     color: #506172;
     font-size: 14px;
+    display: flex;
 }
 .social-link:hover {
     color: #f67280;
