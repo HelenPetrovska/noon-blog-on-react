@@ -18,12 +18,11 @@ const PostTop = ({
     postDate,
     addToFavoritesPage,
     removeFromFavoritesPage,
-    toggleFavorite,
-    inFavorites,
-    isLiked
-
+    isLiked,
+    addLike,
+    removeLike
 }) => {
-
+    
     return (
         <div className="post-top">
             <div className="post-image">
@@ -34,7 +33,7 @@ const PostTop = ({
             </div>
             <div className="categorie-favorit">
                 <Link to={`/category/${categorieLink}`} onClick={() => changeCategory(categorieLink)} className="categorie-link">{categorieLink}</Link>
-                <button className="favorite-btn" title={inFavorites ? 'Remove from Favorites' : 'Add to Favorites'} onClick={() => (inFavorites ? (removeFromFavoritesPage(id), toggleFavorite(id)) : (addToFavoritesPage(id), toggleFavorite(id)))}>
+                <button className="favorite-btn" title={isLiked ? 'Remove from Favorites' : 'Add to Favorites'} onClick={() => (isLiked ? (removeFromFavoritesPage(id), removeLike(id)) : (addToFavoritesPage(id), addLike(id)))}>
                     {isLiked ? <span className="liked"></span> : <span className="noliked"></span>} 
                 </button>
             </div>
@@ -57,10 +56,23 @@ const PostTop = ({
 }
 
 const mapState = (state,{id}) => ({
-    isLiked:state[id]
+    isLiked:state.postLikeState[id]
+})
+
+const mapDispatch = dispatch => ({
+    addLike:(id) => dispatch({
+        type:"LIKE",
+        id
+    }),
+    removeLike:(id) => dispatch({
+        type:"DISLIKE",
+        id
+    })
+
 })
 
 export default connect(
-    mapState
+    mapState,
+    mapDispatch
 
 )(PostTop)

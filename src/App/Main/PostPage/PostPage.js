@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Comments from '../../Components/Comments/Comments'
-import MiniPost from '../../Components/MiniPost/MiniPost'
-import PostTop from '../../Components/PostTop/PostTop'
-import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
-import Social from '../../Components/Social/Social'
-import TagsItem from '../../Components/TagsItem/TagsItem'
+import Comments from '../../../Components/Comments/Comments'
+import MiniPost from '../../../Components/MiniPost/MiniPost'
+import PostTop from '../../../Components/PostTop/PostTop'
+import Index from '../../../Components/ScrollUpBtn/ScrollUpBtn'
+import Social from '../../../Components/Social/Social'
+import TagsItem from '../../../Components/TagsItem/TagsItem'
 import postCardItems, { getPostCardItemsObject } from '../PostCards/postCardItems'
 import Sidebar from '../Sidebar/Sidebar'
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
@@ -14,10 +14,7 @@ import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import './postPage.css'
 
 const PostPage = ({
-    category,
     changeCategory,
-    toggleFavorite,
-    inFavorites,
     addToFavoritesPage,
     removeFromFavoritesPage,
     inFavoritesPage,
@@ -45,8 +42,6 @@ const PostPage = ({
                                 authorImg={postCardItemsObject[id].authorImg}
                                 authorName={postCardItemsObject[id].authorName}
                                 postDate={postCardItemsObject[id].postDate}
-                                toggleFavorite={toggleFavorite}
-                                inFavorites={inFavorites[id]}
                                 addToFavoritesPage={addToFavoritesPage}
                                 removeFromFavoritesPage={removeFromFavoritesPage}
                                 inFavoritesPage={inFavoritesPage}

@@ -37,7 +37,6 @@ class Menu extends Component {
     render() {
 
         const {
-            category,
             changeCategory,
             inFavoritesPage
         } = this.props

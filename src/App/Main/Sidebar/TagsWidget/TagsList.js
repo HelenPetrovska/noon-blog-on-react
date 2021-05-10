@@ -1,5 +1,5 @@
 import React from 'react'
-import TagsItem from '../../../Components/TagsItem/TagsItem'
+import TagsItem from '../../../../Components/TagsItem/TagsItem'
 import postCardItems from '../../PostCards/postCardItems'
 
 const TagsList = ({

@@ -1,5 +1,5 @@
 import React from 'react'
-import MiniPost from '../../../Components/MiniPost/MiniPost'
+import MiniPost from '../../../../Components/MiniPost/MiniPost'
 import postCardItems from '../../PostCards/postCardItems'
 
 import './lastPostsList.css'

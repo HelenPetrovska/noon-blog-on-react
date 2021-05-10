@@ -1,8 +1,9 @@
 import React from 'react'
 import { keys } from 'lodash'
+import {connect} from 'react-redux'
 
-import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
-import Title from '../../Components/Title/Title'
+import Index from '../../../Components/ScrollUpBtn/ScrollUpBtn'
+import Title from '../../../Components/Title/Title'
 import PostCard from '../PostCards/PostCard/PostCard'
 import postCardItems, { getPostCardItemsObject } from '../PostCards/postCardItems'
 import Sidebar from '../Sidebar/Sidebar'
@@ -13,14 +14,12 @@ import './favoritesPage.css'
 const FavoritesPage = ({
     category,
     changeCategory,
-    toggleFavorite,
     removeFavorite,
-    inFavorites,
     addToFavoritesPage,
     inFavoritesPage,
     postCardItemsObject = getPostCardItemsObject(postCardItems),
-    removeFromFavoritesPage
-
+    removeFromFavoritesPage,
+    isLiked
 }) => {
     return (
         <section className="favorite-section">
@@ -33,7 +32,7 @@ const FavoritesPage = ({
                     <div className="blog-content">
                         <div className="post-cards-row">
                             {
-                                keys(inFavoritesPage).map(postId => (
+                                keys(isLiked).filter(postId => isLiked[postId]===true).map(postId => (
                                     <PostCard
                                         key={postCardItemsObject[postId].id}
                                         id={postCardItemsObject[postId].id}
@@ -47,8 +46,6 @@ const FavoritesPage = ({
                                         postDate={postCardItemsObject[postId].postDate}
                                         category={category}
                                         changeCategory={changeCategory}
-                                        inFavorites={inFavorites}
-                                        toggleFavorite={toggleFavorite}
                                         removeFavorite={removeFavorite}
                                         addToFavoritesPage={addToFavoritesPage}
                                         inFavoritesPage={inFavoritesPage}
@@ -68,4 +65,11 @@ const FavoritesPage = ({
     )
 }
 
-export default FavoritesPage
+
+const mapState = (state) => ({
+    isLiked:state.postLikeState
+})
+
+export default connect(
+    mapState
+)(FavoritesPage)

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import postCommentsItems from '../../Main/PostPage/Comments/postCommentsItems'
+import postCommentsItems from '../../App/Main/PostPage/Comments/postCommentsItems'
 
 
 import './comments.css'

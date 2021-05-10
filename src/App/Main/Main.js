@@ -9,7 +9,7 @@ import ContactPage from './ContactPage/ContactPage'
 import AuthorPage from './AuthorPage/AuthorPage'
 import PostPage from './PostPage/PostPage'
 import TagPage from './TagPage/TagPage'
-import Index from '../Components/ScrollUpBtn/ScrollUpBtn'
+import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
 
 import './main.css'
 import FavoritesPage from './FavoritesPage/FavoritesPage'
@@ -18,8 +18,6 @@ import { Link } from 'react-router-dom'
 const Main = ({
     category,
     changeCategory,
-    toggleFavorite,
-    inFavorites,
     addToFavoritesPage,
     removeFromFavoritesPage,
     inFavoritesPage,
@@ -39,8 +37,6 @@ const Main = ({
                     <PostCards
                         category={category}
                         changeCategory={changeCategory}
-                        toggleFavorite={toggleFavorite}
-                        inFavorites={inFavorites}
                         addToFavoritesPage={addToFavoritesPage}
                         removeFromFavoritesPage={removeFromFavoritesPage}
                         inFavoritesPage={inFavoritesPage}
@@ -55,8 +51,6 @@ const Main = ({
                 <CategoryPage
                     category={category}
                     changeCategory={changeCategory}
-                    toggleFavorite={toggleFavorite}
-                    inFavorites={inFavorites}
                     addToFavoritesPage={addToFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
                     inFavoritesPage={inFavoritesPage}
@@ -76,8 +70,6 @@ const Main = ({
                 <FavoritesPage
                     category={category}
                     changeCategory={changeCategory}
-                    toggleFavorite={toggleFavorite}
-                    inFavorites={inFavorites}
                     addToFavoritesPage={addToFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
                     inFavoritesPage={inFavoritesPage}
@@ -85,8 +77,6 @@ const Main = ({
             )}/>
             <Route path="/author" render ={() => (
                 <AuthorPage
-                    toggleFavorite={toggleFavorite}
-                    inFavorites={inFavorites}
                     addToFavoritesPage={addToFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
                     inFavoritesPage={inFavoritesPage}
@@ -100,8 +90,6 @@ const Main = ({
                     match={match}
                     category={category}
                     changeCategory={changeCategory}
-                    toggleFavorite={toggleFavorite}
-                    inFavorites={inFavorites}
                     addToFavoritesPage={addToFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
                     inFavoritesPage={inFavoritesPage}
@@ -112,8 +100,6 @@ const Main = ({
                     match={match}
                     category={category}
                     changeCategory={changeCategory}
-                    toggleFavorite={toggleFavorite}
-                    inFavorites={inFavorites}
                     addToFavoritesPage={addToFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
                     inFavoritesPage={inFavoritesPage}

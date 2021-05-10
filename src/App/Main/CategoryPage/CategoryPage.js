@@ -2,8 +2,8 @@ import React from 'react'
 
 import PostCardsFilter from './PostCardsFilter/PostCardsFilter'
 import Sidebar from '../Sidebar/Sidebar'
-import Title from '../../Components/Title/Title'
-import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
+import Title from '../../../Components/Title/Title'
+import Index from '../../../Components/ScrollUpBtn/ScrollUpBtn'
 
 import './categoryPage.css'
 
@@ -29,8 +29,6 @@ const CategoryPage = ({
                         <PostCardsFilter
                             category={category}
                             changeCategory={changeCategory}
-                            toggleFavorite={toggleFavorite}
-                            inFavorites={inFavorites}
                             addToFavoritesPage={addToFavoritesPage}
                             removeFromFavoritesPage={removeFromFavoritesPage}
                             inFavoritesPage={inFavoritesPage}

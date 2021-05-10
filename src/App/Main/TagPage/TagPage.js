@@ -1,6 +1,6 @@
 import React from 'react'
-import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
-import Title from '../../Components/Title/Title'
+import Index from '../../../Components/ScrollUpBtn/ScrollUpBtn'
+import Title from '../../../Components/Title/Title'
 import PostCard from '../PostCards/PostCard/PostCard'
 import postCardItems from '../PostCards/postCardItems'
 import Sidebar from '../Sidebar/Sidebar'
@@ -10,8 +10,6 @@ import './tagPage.css'
 const TagPage = ({
     category,
     changeCategory,
-    toggleFavorite,
-    inFavorites,
     addToFavoritesPage,
     removeFromFavoritesPage,
     inFavoritesPage,
@@ -53,8 +51,6 @@ const TagPage = ({
                                             postDate={postDate}
                                             category={category}
                                             changeCategory={changeCategory}
-                                            toggleFavorite={toggleFavorite}
-                                            inFavorites={inFavorites}
                                             addToFavoritesPage={addToFavoritesPage}
                                             removeFromFavoritesPage={removeFromFavoritesPage}
                                             inFavoritesPage={inFavoritesPage}

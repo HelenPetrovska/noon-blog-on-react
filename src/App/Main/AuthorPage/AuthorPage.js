@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
+import Index from '../../../Components/ScrollUpBtn/ScrollUpBtn'
 import PostCards from '../PostCards/PostCards'
 import AuthorWidget from '../Sidebar/AuthorWidget/AuthorWidget'
 
@@ -23,8 +23,6 @@ const AuthorPage = ({
             <div className="container-fluid">
                 <AuthorWidget/>
                 <PostCards
-                    toggleFavorite={toggleFavorite}
-                    inFavorites={inFavorites}
                     addToFavoritesPage={addToFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
                     inFavoritesPage={inFavoritesPage}

@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
+import Index from '../../../Components/ScrollUpBtn/ScrollUpBtn'
 import Sidebar from '../Sidebar/Sidebar'
 
 import ContactImage from './contact-img.jpg'

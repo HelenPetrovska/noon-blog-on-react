@@ -41,15 +41,6 @@ class App extends Component {
         })
     }
 
-    toggleFavorite = (postId) => {
-        this.setState(prevState => ({
-            inFavorites: {
-                ...prevState.inFavorites,
-                [postId]: !prevState.inFavorites[postId]
-            }
-        }))
-    }
-
     addToFavoritesPage = (postId) => {
         this.setState((prevState) => ({
             inFavoritesPage: {
@@ -79,8 +70,6 @@ class App extends Component {
                 <Main
                     category={this.state.category}
                     changeCategory={this.changeCategory}
-                    toggleFavorite={this.toggleFavorite}
-                    inFavorites={this.state.inFavorites}
                     addToFavoritesPage={this.addToFavoritesPage}
                     removeFromFavoritesPage = {this.removeFromFavoritesPage}
                     inFavoritesPage={this.state.inFavoritesPage}

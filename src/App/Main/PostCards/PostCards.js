@@ -9,8 +9,6 @@ import "./postCards.css"
 const PostCards = ({
     category,
     changeCategory,
-    toggleFavorite,
-    inFavorites,
     addToFavoritesPage,
     removeFromFavoritesPage,
     inFavoritesPage,
@@ -48,8 +46,6 @@ const PostCards = ({
                                     postDate={postDate}
                                     category={category}
                                     changeCategory={changeCategory}
-                                    toggleFavorite={toggleFavorite}
-                                    inFavorites={inFavorites}
                                     addToFavoritesPage={addToFavoritesPage}
                                     removeFromFavoritesPage={removeFromFavoritesPage}
                                     inFavoritesPage={inFavoritesPage}

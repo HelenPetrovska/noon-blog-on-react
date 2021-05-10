@@ -4,9 +4,12 @@ import App from './App/App'
 import {BrowserRouter} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import {createStore} from 'redux'
-import { postLikeReducer } from "./redux/postLikeReducer"
+import { rootReducer } from "./redux/rootReducer"
 
-const store = createStore(postLikeReducer)
+const store = createStore(
+    rootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 ReactDOM.render(
     <Provider store={store}>

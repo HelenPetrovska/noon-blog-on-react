@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import PostTop from '../../../Components/PostTop/PostTop'
+import PostTop from '../../../../Components/PostTop/PostTop'
 
 import "./postCard.css"
 
@@ -14,10 +14,7 @@ const PostCard = ({
     authorImg,
     authorName,
     postDate,
-    category,
     changeCategory,
-    toggleFavorite,    
-    inFavorites,
     addToFavoritesPage,
     removeFromFavoritesPage,
     inFavoritesPage
@@ -38,8 +35,6 @@ const PostCard = ({
                     authorImg = {authorImg}
                     authorName = {authorName}
                     postDate = {postDate}
-                    toggleFavorite={toggleFavorite}
-                    inFavorites = {inFavorites[id]}
                     addToFavoritesPage={addToFavoritesPage}
                     removeFromFavoritesPage={removeFromFavoritesPage}
                     inFavoritesPage={inFavoritesPage}
