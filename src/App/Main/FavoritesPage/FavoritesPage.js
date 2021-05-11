@@ -1,7 +1,6 @@
 import React from 'react'
 import { keys } from 'lodash'
 import {connect} from 'react-redux'
-
 import Index from '../../../Components/ScrollUpBtn/ScrollUpBtn'
 import Title from '../../../Components/Title/Title'
 import PostCard from '../PostCards/PostCard/PostCard'
@@ -14,11 +13,7 @@ import './favoritesPage.css'
 const FavoritesPage = ({
     category,
     changeCategory,
-    removeFavorite,
-    addToFavoritesPage,
-    inFavoritesPage,
     postCardItemsObject = getPostCardItemsObject(postCardItems),
-    removeFromFavoritesPage,
     isLiked
 }) => {
     return (
@@ -46,10 +41,6 @@ const FavoritesPage = ({
                                         postDate={postCardItemsObject[postId].postDate}
                                         category={category}
                                         changeCategory={changeCategory}
-                                        removeFavorite={removeFavorite}
-                                        addToFavoritesPage={addToFavoritesPage}
-                                        inFavoritesPage={inFavoritesPage}
-                                        removeFromFavoritesPage ={removeFromFavoritesPage}
                                     />
                                 ))
                             }
@@ -64,7 +55,6 @@ const FavoritesPage = ({
         </section>
     )
 }
-
 
 const mapState = (state) => ({
     isLiked:state.postLikeState

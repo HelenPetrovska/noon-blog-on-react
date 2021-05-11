@@ -11,7 +11,11 @@ const Header = ({
     changeCategory,
     toggleModal,
     modal,
-    inFavoritesPage
+    toggleMobileMenu,
+    toggleSubmenu,
+    hideSubmenu,
+    mobileMenu,
+    submenu
 }) => {
     return (
         <header className="header">
@@ -22,7 +26,11 @@ const Header = ({
                     <Menu
                         category={category}
                         changeCategory={changeCategory}
-                        inFavoritesPage={inFavoritesPage}
+                        toggleMobileMenu={toggleMobileMenu}
+                        toggleSubmenu={toggleSubmenu}
+                        hideSubmenu={hideSubmenu}  
+                        mobileMenu={mobileMenu}
+                        submenu={submenu}
                     />
                     <HeaderLinks
                         toggleModal={toggleModal}

@@ -10,9 +10,6 @@ import './tagPage.css'
 const TagPage = ({
     category,
     changeCategory,
-    addToFavoritesPage,
-    removeFromFavoritesPage,
-    inFavoritesPage,
 }) => {
 
     return (
@@ -51,9 +48,6 @@ const TagPage = ({
                                             postDate={postDate}
                                             category={category}
                                             changeCategory={changeCategory}
-                                            addToFavoritesPage={addToFavoritesPage}
-                                            removeFromFavoritesPage={removeFromFavoritesPage}
-                                            inFavoritesPage={inFavoritesPage}
                                         />
                                     )
                                 }))

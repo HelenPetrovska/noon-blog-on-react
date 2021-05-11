@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import PostTop from '../../../../Components/PostTop/PostTop'
 
 import "./postCard.css"
@@ -15,9 +14,6 @@ const PostCard = ({
     authorName,
     postDate,
     changeCategory,
-    addToFavoritesPage,
-    removeFromFavoritesPage,
-    inFavoritesPage
 }) => {
 
     return (
@@ -28,16 +24,13 @@ const PostCard = ({
                     id={id}
                     postImg = {postImg}
                     categorieLink = {categorieLink}
-                    postTitle = {<Link to={`/post/${post_Title}`} className="post-title-link">{postTitle}</Link>}
+                    postTitle = {postTitle}
                     post_Title = {post_Title}
                     changeCategory = {changeCategory}
                     postDescription = {postDescription}
                     authorImg = {authorImg}
                     authorName = {authorName}
                     postDate = {postDate}
-                    addToFavoritesPage={addToFavoritesPage}
-                    removeFromFavoritesPage={removeFromFavoritesPage}
-                    inFavoritesPage={inFavoritesPage}
                 />
             </div>
         </div>

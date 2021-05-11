@@ -1,4 +1,5 @@
 import React, { Component, useState } from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 
@@ -16,8 +17,6 @@ const PostTop = ({
     authorImg,
     authorName,
     postDate,
-    addToFavoritesPage,
-    removeFromFavoritesPage,
     isLiked,
     addLike,
     removeLike
@@ -33,11 +32,12 @@ const PostTop = ({
             </div>
             <div className="categorie-favorit">
                 <Link to={`/category/${categorieLink}`} onClick={() => changeCategory(categorieLink)} className="categorie-link">{categorieLink}</Link>
-                <button className="favorite-btn" title={isLiked ? 'Remove from Favorites' : 'Add to Favorites'} onClick={() => (isLiked ? (removeFromFavoritesPage(id), removeLike(id)) : (addToFavoritesPage(id), addLike(id)))}>
+                <button className="favorite-btn" title={isLiked ? 'Remove from Favorites' : 'Add to Favorites'} onClick={() => (isLiked ? removeLike(id) : addLike(id))}>
                     {isLiked ? <span className="liked"></span> : <span className="noliked"></span>} 
                 </button>
             </div>
-            <h4 className="post-title">{postTitle}</h4>
+            <h4 className="post-title"><Link to={`/post/${post_Title}`} className="post-title-link">{postTitle}</Link></h4>
+            <h4 className="post-title-page">{postTitle}</h4>
             <p className="post-description">{postDescription}</p>
             <div className="post-info">
                 <div className="author">
@@ -53,6 +53,26 @@ const PostTop = ({
             </div>
         </div>
     )
+}
+
+PostTop.propTypes ={
+    id:PropTypes.number.isRequired,
+    postImg:PropTypes.string,
+    categorieLink:PropTypes.string.isRequired,
+    postTitle:PropTypes.string.isRequired,
+    post_Title:PropTypes.string.isRequired,
+    postDescription:PropTypes.string,
+    authorImg:PropTypes.string,
+    authorName:PropTypes.string,
+    postDate:PropTypes.string,
+}
+
+PostTop.defaultProps = {
+    postImg:"/images/noImage.jpg",
+    postDescription:"No description",
+    authorImg:"",
+    authorName:"No name",
+    postDate:"",
 }
 
 const mapState = (state,{id}) => ({

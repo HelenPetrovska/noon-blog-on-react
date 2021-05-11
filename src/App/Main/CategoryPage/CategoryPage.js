@@ -10,11 +10,6 @@ import './categoryPage.css'
 const CategoryPage = ({
     category,
     changeCategory,
-    toggleFavorite,
-    inFavorites,
-    addToFavoritesPage,
-    removeFromFavoritesPage,
-    inFavoritesPage
 }) => {
 
     return (
@@ -29,9 +24,6 @@ const CategoryPage = ({
                         <PostCardsFilter
                             category={category}
                             changeCategory={changeCategory}
-                            addToFavoritesPage={addToFavoritesPage}
-                            removeFromFavoritesPage={removeFromFavoritesPage}
-                            inFavoritesPage={inFavoritesPage}
                         />
                     </div>
                     <Sidebar

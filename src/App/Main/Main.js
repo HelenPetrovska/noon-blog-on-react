@@ -10,17 +10,13 @@ import AuthorPage from './AuthorPage/AuthorPage'
 import PostPage from './PostPage/PostPage'
 import TagPage from './TagPage/TagPage'
 import Index from '../../Components/ScrollUpBtn/ScrollUpBtn'
+import FavoritesPage from './FavoritesPage/FavoritesPage'
 
 import './main.css'
-import FavoritesPage from './FavoritesPage/FavoritesPage'
-import { Link } from 'react-router-dom'
 
 const Main = ({
     category,
     changeCategory,
-    addToFavoritesPage,
-    removeFromFavoritesPage,
-    inFavoritesPage,
     changeSlice,
     sliceTo,
     sliceFrom
@@ -37,9 +33,6 @@ const Main = ({
                     <PostCards
                         category={category}
                         changeCategory={changeCategory}
-                        addToFavoritesPage={addToFavoritesPage}
-                        removeFromFavoritesPage={removeFromFavoritesPage}
-                        inFavoritesPage={inFavoritesPage}
                         changeSlice={changeSlice}
                         sliceTo={sliceTo}
                         sliceFrom={sliceFrom}
@@ -51,9 +44,6 @@ const Main = ({
                 <CategoryPage
                     category={category}
                     changeCategory={changeCategory}
-                    addToFavoritesPage={addToFavoritesPage}
-                    removeFromFavoritesPage={removeFromFavoritesPage}
-                    inFavoritesPage={inFavoritesPage}
                 />
             )}/>
             <Route path="/about" render = {() => (
@@ -70,16 +60,10 @@ const Main = ({
                 <FavoritesPage
                     category={category}
                     changeCategory={changeCategory}
-                    addToFavoritesPage={addToFavoritesPage}
-                    removeFromFavoritesPage={removeFromFavoritesPage}
-                    inFavoritesPage={inFavoritesPage}
                 />
             )}/>
             <Route path="/author" render ={() => (
                 <AuthorPage
-                    addToFavoritesPage={addToFavoritesPage}
-                    removeFromFavoritesPage={removeFromFavoritesPage}
-                    inFavoritesPage={inFavoritesPage}
                     changeSlice={changeSlice}
                     sliceTo={sliceTo}
                     sliceFrom={sliceFrom}
@@ -90,9 +74,6 @@ const Main = ({
                     match={match}
                     category={category}
                     changeCategory={changeCategory}
-                    addToFavoritesPage={addToFavoritesPage}
-                    removeFromFavoritesPage={removeFromFavoritesPage}
-                    inFavoritesPage={inFavoritesPage}
                 />
             )}/>
             <Route path={`/tag/:postTag`} render = {({match}) => (
@@ -100,9 +81,6 @@ const Main = ({
                     match={match}
                     category={category}
                     changeCategory={changeCategory}
-                    addToFavoritesPage={addToFavoritesPage}
-                    removeFromFavoritesPage={removeFromFavoritesPage}
-                    inFavoritesPage={inFavoritesPage}
                 />
             )}/>
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { omit } from 'lodash'
 
 import "../common/style/reset.css"
 import "../common/style/base.css"
@@ -15,11 +14,11 @@ class App extends Component {
 
     state = {
         category: 'travel',
-        inFavorites: {},
-        inFavoritesPage:{},
         modal:false,
         sliceFrom: 0,
-        sliceTo: 6
+        sliceTo: 6,
+        mobileMenu: false,
+        submenu: false
     }
 
     changeCategory = ((name) => {
@@ -41,21 +40,28 @@ class App extends Component {
         })
     }
 
-    addToFavoritesPage = (postId) => {
-        this.setState((prevState) => ({
-            inFavoritesPage: {
-                ...prevState.inFavoritesPage,
-                [postId]:[postId]
+    toggleMobileMenu = () => {
+        this.setState((prevState) => {
+            return {
+                mobileMenu: !prevState.mobileMenu
             }
-        }))
+        })
     }
 
-    removeFromFavoritesPage = (postId) => {
-        this.setState((prevState) => ({
-            inFavoritesPage:omit(prevState.inFavoritesPage,[postId])
-        }))
+    toggleSubmenu = () => {
+        this.setState((prevState) => {
+            return {
+                submenu: !prevState.submenu
+            }
+        })
     }
-
+    hideSubmenu = () => {
+        this.setState((prevState) => {
+            return {
+                submenu:false
+            }
+        })
+    }
 
     render () {
         return (
@@ -65,14 +71,15 @@ class App extends Component {
                     changeCategory={this.changeCategory}
                     toggleModal={this.toggleModal}
                     modal={this.state.modal}
-                    inFavoritesPage={this.state.inFavoritesPage}
+                    toggleMobileMenu={this.toggleMobileMenu}
+                    toggleSubmenu={this.toggleSubmenu}
+                    hideSubmenu={this.hideSubmenu}
+                    mobileMenu={this.state.mobileMenu}
+                    submenu={this.state.submenu}
                 />
                 <Main
                     category={this.state.category}
                     changeCategory={this.changeCategory}
-                    addToFavoritesPage={this.addToFavoritesPage}
-                    removeFromFavoritesPage = {this.removeFromFavoritesPage}
-                    inFavoritesPage={this.state.inFavoritesPage}
                     changeSlice={this.changeSlice}
                     sliceTo={this.state.sliceTo}
                     sliceFrom={this.state.sliceFrom}
@@ -86,7 +93,6 @@ class App extends Component {
             </>
         )
     }
-    
 }
 
 export default App

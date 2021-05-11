@@ -8,11 +8,6 @@ import postCardItems from '../../PostCards/postCardItems'
 const PostCardsFilter = ({
     category,
     changeCategory,
-    toggleFavorite,
-    inFavorites,
-    addToFavoritesPage,
-    removeFromFavoritesPage,
-    inFavoritesPage
 }) => {
     return (
         <section className="post-cards">
@@ -43,11 +38,6 @@ const PostCardsFilter = ({
                                     authorName={authorName}
                                     postDate={postDate}
                                     changeCategory={changeCategory}
-                                    toggleFavorite={toggleFavorite}
-                                    inFavorites={inFavorites}
-                                    addToFavoritesPage={addToFavoritesPage}
-                                    removeFromFavoritesPage={removeFromFavoritesPage}
-                                    inFavoritesPage={inFavoritesPage}
                                 />
                             )
                         })

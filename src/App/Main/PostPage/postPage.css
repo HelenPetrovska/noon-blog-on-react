@@ -10,7 +10,12 @@
 .post-section .author-categorie-link {
     display: none;
 }
+
 .post-section .post-title {
+    display: none;
+}
+.post-section .post-title-page {
+    display: block;
     font-size: 24px;
     margin-bottom: 20px;
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Comments from '../../../Components/Comments/Comments'
 import MiniPost from '../../../Components/MiniPost/MiniPost'
 import PostTop from '../../../Components/PostTop/PostTop'
@@ -15,9 +14,6 @@ import './postPage.css'
 
 const PostPage = ({
     changeCategory,
-    addToFavoritesPage,
-    removeFromFavoritesPage,
-    inFavoritesPage,
     match,
     postCardItemsObject = getPostCardItemsObject(postCardItems),
 }) => {
@@ -42,9 +38,6 @@ const PostPage = ({
                                 authorImg={postCardItemsObject[id].authorImg}
                                 authorName={postCardItemsObject[id].authorName}
                                 postDate={postCardItemsObject[id].postDate}
-                                addToFavoritesPage={addToFavoritesPage}
-                                removeFromFavoritesPage={removeFromFavoritesPage}
-                                inFavoritesPage={inFavoritesPage}
                             />
                             <div
                                 dangerouslySetInnerHTML={{
