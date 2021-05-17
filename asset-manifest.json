@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/noon-blog-on-react/static/css/main.846b8d49.chunk.css",
+    "main.js": "/noon-blog-on-react/static/js/main.cf99fe6b.chunk.js",
+    "main.js.map": "/noon-blog-on-react/static/js/main.cf99fe6b.chunk.js.map",
+    "runtime-main.js": "/noon-blog-on-react/static/js/runtime-main.25190c27.js",
+    "runtime-main.js.map": "/noon-blog-on-react/static/js/runtime-main.25190c27.js.map",
+    "static/css/2.7902e632.chunk.css": "/noon-blog-on-react/static/css/2.7902e632.chunk.css",
+    "static/js/2.c7f10ed2.chunk.js": "/noon-blog-on-react/static/js/2.c7f10ed2.chunk.js",
+    "static/js/2.c7f10ed2.chunk.js.map": "/noon-blog-on-react/static/js/2.c7f10ed2.chunk.js.map",
+    "index.html": "/noon-blog-on-react/index.html",
+    "static/css/2.7902e632.chunk.css.map": "/noon-blog-on-react/static/css/2.7902e632.chunk.css.map",
+    "static/css/main.846b8d49.chunk.css.map": "/noon-blog-on-react/static/css/main.846b8d49.chunk.css.map",
+    "static/js/2.c7f10ed2.chunk.js.LICENSE.txt": "/noon-blog-on-react/static/js/2.c7f10ed2.chunk.js.LICENSE.txt",
+    "static/media/about.42ac8291.jpg": "/noon-blog-on-react/static/media/about.42ac8291.jpg",
+    "static/media/author.5db892f6.jpg": "/noon-blog-on-react/static/media/author.5db892f6.jpg",
+    "static/media/contact-img.2a507012.jpg": "/noon-blog-on-react/static/media/contact-img.2a507012.jpg",
+    "static/media/insta1.38737c16.jpg": "/noon-blog-on-react/static/media/insta1.38737c16.jpg",
+    "static/media/insta2.296e7254.jpg": "/noon-blog-on-react/static/media/insta2.296e7254.jpg",
+    "static/media/insta3.b70800b4.jpg": "/noon-blog-on-react/static/media/insta3.b70800b4.jpg",
+    "static/media/insta4.124c9dd2.jpg": "/noon-blog-on-react/static/media/insta4.124c9dd2.jpg",
+    "static/media/insta5.11466d52.jpg": "/noon-blog-on-react/static/media/insta5.11466d52.jpg",
+    "static/media/insta6.01501594.jpg": "/noon-blog-on-react/static/media/insta6.01501594.jpg",
+    "static/media/slick-theme.css": "/noon-blog-on-react/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.25190c27.js",
+    "static/css/2.7902e632.chunk.css",
+    "static/js/2.c7f10ed2.chunk.js",
+    "static/css/main.846b8d49.chunk.css",
+    "static/js/main.cf99fe6b.chunk.js"
+  ]
+}
