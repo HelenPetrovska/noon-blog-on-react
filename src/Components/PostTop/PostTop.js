@@ -68,7 +68,7 @@ PostTop.propTypes ={
 }
 
 PostTop.defaultProps = {
-    postImg:"/images/noImage.jpg",
+    postImg:"./images/noImage.jpg",
     postDescription:"No description",
     authorImg:"",
     authorName:"No name",

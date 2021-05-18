@@ -25,9 +25,7 @@ const AboutPage = ({
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus facere, nemo dignissimos, in labore nostrum provident perferendis minima accusamus aliquam reprehenderit autem</p>
                                 <p>Praesentium sunt beatae libero non totam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus facere, nemo dignissimos, in labore nostrum provident perferendis minima accusamus aliquam reprehenderit autem praesentium sunt beatae libero non totam.</p>
                                 <div className="quote">
-                                    <div className="quote-icon">
-                                        <i className="fa fa-quote-right" aria-hidden="true"></i>
-                                    </div>
+                                    <div className="quote-icon">&#8221;</div>
                                     <p>"My website’s kind of fun for me. I get to do drawings on that. It’s kind of fun."</p>
                                     <span>Jeff Bridges.</span>
                                 </div>

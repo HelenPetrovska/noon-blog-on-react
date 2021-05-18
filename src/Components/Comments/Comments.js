@@ -23,7 +23,7 @@ const Comments = () => {
         email:"",
         website:"",
         commentDate: date,
-        image:"/images/userDefault.png"
+        image:"./images/userDefault.png"
     })
 
     const handleNameChange = (e) => {
@@ -65,7 +65,7 @@ const Comments = () => {
             email:"",
             website:"",
             commentDate: date,
-            image:"/images/userDefault.png"
+            image:"./images/userDefault.png"
         })
     }
 
