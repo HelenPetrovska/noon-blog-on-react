@@ -1,5 +1,4 @@
 import React from 'react'
-import Index from '../../../Components/ScrollUpBtn/ScrollUpBtn'
 import PostCards from '../PostCards/PostCards'
 import AuthorWidget from '../Sidebar/AuthorWidget/AuthorWidget'
 

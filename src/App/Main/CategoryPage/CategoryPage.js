@@ -3,7 +3,6 @@ import React from 'react'
 import PostCardsFilter from './PostCardsFilter/PostCardsFilter'
 import Sidebar from '../Sidebar/Sidebar'
 import Title from '../../../Components/Title/Title'
-import Index from '../../../Components/ScrollUpBtn/ScrollUpBtn'
 
 import './categoryPage.css'
 

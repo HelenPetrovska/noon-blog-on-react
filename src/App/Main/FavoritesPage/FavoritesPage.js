@@ -1,7 +1,6 @@
 import React from 'react'
 import { keys } from 'lodash'
 import {connect} from 'react-redux'
-import Index from '../../../Components/ScrollUpBtn/ScrollUpBtn'
 import Title from '../../../Components/Title/Title'
 import PostCard from '../PostCards/PostCard/PostCard'
 import postCardItems, { getPostCardItemsObject } from '../PostCards/postCardItems'
