@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/noon-blog-on-react/static/css/main.846b8d49.chunk.css",
-    "main.js": "/noon-blog-on-react/static/js/main.3042e6d3.chunk.js",
-    "main.js.map": "/noon-blog-on-react/static/js/main.3042e6d3.chunk.js.map",
+    "main.js": "/noon-blog-on-react/static/js/main.fb58f2e5.chunk.js",
+    "main.js.map": "/noon-blog-on-react/static/js/main.fb58f2e5.chunk.js.map",
     "runtime-main.js": "/noon-blog-on-react/static/js/runtime-main.25190c27.js",
     "runtime-main.js.map": "/noon-blog-on-react/static/js/runtime-main.25190c27.js.map",
     "static/css/2.7902e632.chunk.css": "/noon-blog-on-react/static/css/2.7902e632.chunk.css",
@@ -28,6 +28,6 @@
     "static/css/2.7902e632.chunk.css",
     "static/js/2.eefc98f5.chunk.js",
     "static/css/main.846b8d49.chunk.css",
-    "static/js/main.3042e6d3.chunk.js"
+    "static/js/main.fb58f2e5.chunk.js"
   ]
 }
