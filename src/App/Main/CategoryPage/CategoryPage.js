@@ -31,7 +31,6 @@ const CategoryPage = ({
                     />
                 </div>
             </div> 
-            <Index/>
         </section>
     )
 }

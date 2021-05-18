@@ -37,7 +37,6 @@ const Main = ({
                         sliceTo={sliceTo}
                         sliceFrom={sliceFrom}
                     />
-                    <Index/>
                 </>
             )}/>
             <Route path="/category/" render = {() => (

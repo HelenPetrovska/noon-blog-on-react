@@ -79,9 +79,7 @@ const PostPage = ({
                     />
                 </div>
             </div>
-            <Index/>
         </section>
-
     )
 }
 

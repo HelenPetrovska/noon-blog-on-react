@@ -21,7 +21,6 @@ const AuthorPage = ({
                     sliceFrom={sliceFrom}
                 />
             </div>
-            <Index/>
         </section>
 
     )

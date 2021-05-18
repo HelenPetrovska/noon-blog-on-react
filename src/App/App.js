@@ -9,6 +9,7 @@ import Main from './Main/Main'
 import Subscribe from './Subscribe/Subscribe'
 import Footer from './Footer/Footer'
 import SearchModal from './SearchModal/SearchModal'
+import Index from '../Components/ScrollUpBtn/ScrollUpBtn'
 
 
 class App extends Component {
@@ -86,6 +87,7 @@ class App extends Component {
                 />
                 <Subscribe/>
                 <Footer/>
+                <Index/>
                 <SearchModal 
                     toggleModal={this.toggleModal}
                     modal={this.state.modal}

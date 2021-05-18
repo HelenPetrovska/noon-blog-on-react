@@ -59,9 +59,7 @@ const TagPage = ({
                     />
                 </div>
             </div>
-            <Index/>
         </section>
-
     )
 }
 

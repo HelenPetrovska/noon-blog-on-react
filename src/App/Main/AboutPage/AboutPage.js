@@ -38,7 +38,6 @@ const AboutPage = ({
                     />
                 </div>
             </div>
-            <Index/>
         </section>
 
     )

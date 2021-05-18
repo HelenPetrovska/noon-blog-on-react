@@ -34,7 +34,6 @@ const ContactPage = ({
                     />
                 </div>
             </div>
-            <Index/>
         </section>
     )
 }
